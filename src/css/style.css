@@ -74,7 +74,12 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-
+.yinrutext {
+    background: linear-gradient(90deg, #E8EAED 0%, #7877C6 10.97%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 .text-test {
     background: linear-gradient(90deg, #DE97F7 0%, #B294F5 50.5%, #9BB1FD 100%) !important;

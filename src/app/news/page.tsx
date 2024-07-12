@@ -1,6 +1,3 @@
-
-
-
 "use client"
 import React, { useEffect, useMemo, useState } from "react";
 import { Descriptions, message } from 'antd';
@@ -32,6 +29,7 @@ import suanli2_png from '@/assets/img/suanli2.png';
 import HeaderLayout from "@/components/Layouts/HeaderLayout";
 import Image from "next/image";
 import { title } from "process";
+import Footer from "@/components/Footer";
 
 const News: React.FC = () => {
     const Card = ({ imageSrc, icon, title, description }) => {
@@ -108,9 +106,6 @@ const News: React.FC = () => {
                     <div className="lg:flex   gap-8 ">
 
                         <div className=" w-3/4 h-[120px] mx-auto  lg:w-[320px]  bg-gray-800 rounded-xl lg:h-[168px]   border" ></div>
-
-
-
                         <div className="flex flex-col max-w-[762px] ">
                             <div className=" mt-10 lg:mt-0 flex flex-col self-stretch px-5  text-base font-light text-violet-100 text-opacity-70  ">
                                 <div className=" text-sm  lg:text-xl  text-white max-md:max-w-full">
@@ -138,7 +133,6 @@ const News: React.FC = () => {
 
     return (
         <HeaderLayout>
-
             <div className=" w-full max-w-[1440px] flex flex-col  items-center  ">
 
                 <div className="flex flex-col  items-center relative">
@@ -170,51 +164,7 @@ const News: React.FC = () => {
 
 
                 {/* 底部 */}
-
-                <div className=" w-full max-w-[1440px] pb-10 mt-27  ">
-                    <div className=" h-[1px] " style={{ border: '1px solid #2A2D44' }}> </div>
-
-                    <div className=" px-10 lg:px-25  mt-5 lg:mt-13 justify-between flex ">
-                        <div className=" lg:flex  lg:gap-25">
-                            <div className="text-[12px] lg:text-sm"> LOGO</div>
-                            <div className="flex  lg:gap-13  flex-wrap  gap-1 ">
-                                {textData.map((item, index) => {
-                                    return (
-                                        <BottomText key={index} text={item.name}></BottomText>
-                                    )
-                                })}
-                            </div>
-                        </div>
-                        <div className=" flex gap-5">
-                            <Image src={vx_svg} className="    w-[20px] h-[20px]     " alt="bg" />
-                            <Image src={zh_svg} className="    w-[20px] h-[20px]     " alt="bg" />
-                        </div>
-
-
-
-                    </div>
-
-
-
-
-
-                    <div className="lg:px-25 lg:mt-10 mt-1 px-10">
-                        <div className="lg:flex gap-13 ">
-                            <div className=" text-[12px]" style={{ color: '#8A8F9' }}>地址：浙江省杭州市滨江区星城中心B座1101</div>
-                            <div className=" text-[12px]" style={{ color: '#8A8F9' }}>邮箱：it@ingru.ai</div>
-                            <div className=" text-[12px]" style={{ color: '#8A8F9' }}>联系电话：+86 17788886513 / 13918186286</div>
-
-                        </div>
-                    </div>
-
-                    <div className="lg:px-25 px-10 lg:mt-5  mt-1 ">
-                        <div className="flex gap-13 ">
-                            <div className=" lg:text-sm text-[12px]" style={{ color: '#8A8F9' }}>Copyright©2024隐入（杭州）科技有限公司版权所有  |  浙ICP备2024065338号</div>
-
-
-                        </div>
-                    </div>
-                </div>
+                <Footer></Footer>
             </div>
 
         </HeaderLayout >

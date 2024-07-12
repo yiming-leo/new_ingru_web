@@ -23,10 +23,14 @@ import zh_svg from '@/assets/svg/zh.svg';
 import bg2_png from '@/assets/img/bg2.png';
 import star2_png from '@/assets/img/star2.png';
 import beacon_png from '@/assets/img/beacon.png';
+import news1_png from '@/assets/img/news1.png'
+import news2_png from '@/assets/img/news2.png'
+import news3_png from '@/assets/img/news3.png'
 
 import HeaderLayout from "@/components/Layouts/HeaderLayout";
 import Image from "next/image";
 import { title } from "process";
+import Footer from "@/components/Footer";
 
 const Home: React.FC = () => {
   const Card = ({ imageSrc, icon, title, description }) => {
@@ -78,11 +82,11 @@ const Home: React.FC = () => {
   const NewsCard = ({ imageSrc, icon, title, description }) => {
     return (
       <div className="mt-10 lg:mt-0 flex-1">
-        <div className=" h-[200px] border" />
+        <Image src={imageSrc} className=" h-[200px] " alt="bg" />
+        {/* <div className=" h-[200px] border" /> */}
 
         <div className="mt-5">
           <div className="flex items-center gap-[10px]">
-            <Image src={icon} className="w-4 h-4" alt="bg" />
             <div className="text-white text-xl">{title}</div>
           </div>
           <div className="mt-3 text-16px" style={{ color: 'rgba(239, 237, 253, 0.70)', fontFamily: 'alibb-light' }}>
@@ -92,6 +96,11 @@ const Home: React.FC = () => {
       </div>
     );
   };
+
+  const newsData: any = [{ imageSrc: news1_png, icon: icon33_png, title: '隐入（浙江）科技有限公司应邀参加“环...', description: '隐入（浙江）科技有限公司于7月4日应邀参了“康”企乐业“乾”图大展“环浙工大创新经济圈”创业兴业恳...' },
+  { imageSrc: news2_png, icon: icon11_png, title: '爆火的Sora，对医疗领域会有哪些影响？', description: '北京时间2月16日凌晨，OpenAI宣布了一项重大突破：其全新研发的文生视频大模型Sora正式亮相。继...' },
+  { imageSrc: news3_png, icon: icon22_png, title: '孙凝晖院士给正国级、副国级讲课的万字...', description: '中国人大网近日刊登孙凝晖在十四届全国人大常委会专题讲座上的讲稿《人工智能与智能计算的发展》，现...' }
+  ]
 
 
   return (
@@ -234,7 +243,7 @@ const Home: React.FC = () => {
 
                 <div className="flex  mt-15  gap-13 justify-center">
 
-                  {cardData.map((item, index) => {
+                  {newsData.map((item, index) => {
                     return <NewsCard key={index} imageSrc={item.imageSrc} icon={item.icon} title={item.title} description={item.description}></NewsCard>
                   })}
                 </div>
@@ -251,7 +260,7 @@ const Home: React.FC = () => {
 
           <div className="  mt-10  gap-13 justify-center">
 
-            {cardData.map((item, index) => {
+            {newsData.map((item, index) => {
               return <NewsCard key={index} imageSrc={item.imageSrc} icon={item.icon} title={item.title} description={item.description}></NewsCard>
             })}
           </div>
@@ -260,43 +269,7 @@ const Home: React.FC = () => {
 
         {/* 底部 */}
 
-        <div className=" w-full max-w-[1440px] py-10  ">
-          <div className=" mt-20 lg:mt-40 h-[1px] " style={{ border: '1px solid #2A2D44' }}> </div>
-
-          <div className=" px-10 lg:px-25  mt-5 lg:mt-13 justify-between flex ">
-            <div className=" lg:flex  lg:gap-25">
-              <div className="text-[12px] lg:text-sm"> LOGO</div>
-              <div className="flex  lg:gap-13  flex-wrap  gap-1 ">
-                {textData.map((item, index) => {
-                  return (
-                    <BottomText key={index} text={item.name}></BottomText>
-                  )
-                })}
-              </div>
-            </div>
-            <div className=" flex gap-5">
-              <Image src={vx_svg} className="    w-[20px] h-[20px]     " alt="bg" />
-              <Image src={zh_svg} className="    w-[20px] h-[20px]     " alt="bg" />
-            </div>
-
-          </div>
-          <div className="lg:px-25 lg:mt-10 mt-1 px-10">
-            <div className="lg:flex gap-13 ">
-              <div className=" text-[12px]" style={{ color: '#8A8F9' }}>地址：浙江省杭州市滨江区星城中心B座1101</div>
-              <div className=" text-[12px]" style={{ color: '#8A8F9' }}>邮箱：it@ingru.ai</div>
-              <div className=" text-[12px]" style={{ color: '#8A8F9' }}>联系电话：+86 17788886513 / 13918186286</div>
-
-            </div>
-          </div>
-
-          {/* <div className="px-25 mt-5  ">
-              <div className="flex gap-13 ">
-                <div className=" text-sm" style={{ color: '#8A8F9' }}>Copyright©2024隐入（杭州）科技有限公司版权所有  |  浙ICP备2024065338号</div>
-
-
-              </div>
-            </div> */}
-        </div>
+        <Footer></Footer>
       </div>
 
     </HeaderLayout >

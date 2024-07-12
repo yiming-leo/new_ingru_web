@@ -28,10 +28,13 @@ import star2_png from '@/assets/img/star2.png';
 import beacon_png from '@/assets/img/beacon.png';
 import suanli1_png from '@/assets/img/suanli1.png';
 import suanli2_png from '@/assets/img/suanli2.png';
+import logo_png from '@/assets/img/text_logo.png';
 
 import HeaderLayout from "@/components/Layouts/HeaderLayout";
 import Image from "next/image";
 import { title } from "process";
+import Footer from "@/components/Footer";
+import { useRouter } from "next/navigation";
 
 const Home: React.FC = () => {
     const Card = ({ imageSrc, icon, title, description }) => {
@@ -98,6 +101,11 @@ const Home: React.FC = () => {
         );
     };
 
+    const router = useRouter()
+
+    const goLink = () => {
+        router.push('/')
+    }
 
     return (
         <HeaderLayout>
@@ -119,7 +127,7 @@ const Home: React.FC = () => {
 
                         <div className=" relative  cursor-pointer z-10 flex  items-center justify-center lg:w-[137px] lg:h-[45px]  w-[120px] h-[35px]" style={{ borderRadius: '24px', background: 'linear-gradient(90deg, #455EB5 0%, #5643CC 50%, #673FD7 100%)' }}>
                             <Image src={star_png} className=" w-8  h-6" alt="bg" />
-                            <div className="   text-white ">立即使用</div>
+                            <div className="   text-white " onClick={goLink}>立即使用</div>
                         </div>
 
                     </div>
@@ -238,51 +246,7 @@ const Home: React.FC = () => {
                 </div>
 
                 {/* 底部 */}
-
-                <div className=" w-full max-w-[1440px] py-10  ">
-                    <div className=" mt-20 lg:mt-40 h-[1px] " style={{ border: '1px solid #2A2D44' }}> </div>
-
-                    <div className=" px-10 lg:px-25  mt-5 lg:mt-13 justify-between flex ">
-                        <div className=" lg:flex  lg:gap-25">
-                            <div className="text-[12px] lg:text-sm"> LOGO</div>
-                            <div className="flex  lg:gap-13  flex-wrap  gap-1 ">
-                                {textData.map((item, index) => {
-                                    return (
-                                        <BottomText key={index} text={item.name}></BottomText>
-                                    )
-                                })}
-                            </div>
-                        </div>
-                        <div className=" flex gap-5">
-                            <Image src={vx_svg} className="    w-[20px] h-[20px]     " alt="bg" />
-                            <Image src={zh_svg} className="    w-[20px] h-[20px]     " alt="bg" />
-                        </div>
-
-
-
-                    </div>
-
-
-
-
-
-                    <div className="lg:px-25 lg:mt-10 mt-1 px-10">
-                        <div className="lg:flex gap-13 ">
-                            <div className=" text-[12px]" style={{ color: '#8A8F9' }}>地址：浙江省杭州市滨江区星城中心B座1101</div>
-                            <div className=" text-[12px]" style={{ color: '#8A8F9' }}>邮箱：it@ingru.ai</div>
-                            <div className=" text-[12px]" style={{ color: '#8A8F9' }}>联系电话：+86 17788886513 / 13918186286</div>
-
-                        </div>
-                    </div>
-
-                    <div className="lg:px-25 px-10 lg:mt-5  mt-1 ">
-                        <div className="flex gap-13 ">
-                            <div className=" lg:text-sm text-[12px]" style={{ color: '#8A8F9' }}>Copyright©2024隐入（杭州）科技有限公司版权所有  |  浙ICP备2024065338号</div>
-
-
-                        </div>
-                    </div>
-                </div>
+                <Footer></Footer>
             </div>
 
         </HeaderLayout >

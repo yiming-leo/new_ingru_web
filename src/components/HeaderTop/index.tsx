@@ -175,7 +175,8 @@ const HeaderTop = () => {
         <header className={`${visible ? 'translate-y-0' : '-translate-y-full'} transition-all  duration-700 flex   flex-col  justify-between  w-full  fixed   h-12  bg-bgColor   z-20  max-w-[1920px]  `}>
           <div className={`flex gap-3  h-full px-10  lg:px-39 justify-between items-center lg:justify-start`}  >
             <Link href={'/'} className="flex  cursor-pointer items-center">
-              <Image src={logo_png} className=" cursor-pointer  w-6 h-6 aspect-square" alt="Company Logo" />
+              <Image src={logo_png} className=" cursor-pointer  w-5 h-5 aspect-square" alt="Company Logo" />
+              <div className=" text-white ml-2">隐入科技</div>
             </Link>
 
             <nav className=" hidden  lg:flex  gap-14  justify-between items-center my-auto ml-18  ">

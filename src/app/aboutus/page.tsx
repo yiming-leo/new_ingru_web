@@ -24,10 +24,24 @@ import bg2_png from '@/assets/img/bg2.png';
 import star2_png from '@/assets/img/star2.png';
 import beacon_png from '@/assets/img/beacon.png';
 import ourbg1_png from '@/assets/img/ourbg1.png';
+import oursvg1_svg from '@/assets/svg/oursvg1.svg';
+import gaohan_png from '@/assets/img/gaohan.png';
+import zhangguoyan_png from '@/assets/img/zhangguoyan.png';
+import yinrong_png from '@/assets/img/yinrong.png';
+import ruanmingfeng_png from '@/assets/img/ruanmingfeng.png';
+import yangbo_png from '@/assets/img/yangbo.png';
+import taotao_png from '@/assets/img/taotao.png';
+import dengchao_png from '@/assets/img/dengchao.png';
+import wangyuan_png from '@/assets/img/wangyuan.png';
+import xiaozhao_png from '@/assets/img/xiaozhao.png'
+import liujie_png from '@/assets/img/liujie.png'
+import xiaoyu_png from '@/assets/img/xiaoyu.png'
+import xiaoliao_png from '@/assets/img/xiaoliao.png'
 
 import HeaderLayout from "@/components/Layouts/HeaderLayout";
 import Image from "next/image";
 import { title } from "process";
+import Footer from "@/components/Footer";
 
 const Aboutus: React.FC = () => {
     const Card = ({ imageSrc, icon, title, description }) => {
@@ -76,125 +90,148 @@ const Aboutus: React.FC = () => {
     { imageSrc: LMCloud_png, icon: icon22_png, title: 'LM Cloud', description: '大模型云平台，支撑AGI计算基础设施能力，助力用户低成本部署AGI模型及应用' }
     ]
 
-    const NewsCard = ({ imageSrc, icon, title, description }) => {
-        return (
-            <div className="mt-10 lg:mt-0 flex-1">
-                <div className=" h-[200px] border" />
 
-                <div className="mt-5">
-                    <div className="flex items-center gap-[10px]">
-                        <Image src={icon} className="w-4 h-4" alt="bg" />
-                        <div className="text-white text-xl">{title}</div>
+
+
+    const MemberContent = ({ name, des, img }) => {
+        return (
+            <div className=" flex items-center gap-5 mt-15 lg:mt-0">
+                <Image src={img} className="w-[100px] h-[100px]   rounded-[50%]  " alt="bg" />
+                <div className="w-73 flex flex-col justify-center  h-25 gap-2 ">
+                    <div className=" text-white">
+                        {name}
                     </div>
-                    <div className="mt-3 text-16px" style={{ color: 'rgba(239, 237, 253, 0.70)', fontFamily: 'alibb-light' }}>
-                        {description}
+                    <div className=" text-[14px] " style={{ color: 'rgba(239, 237, 253, 0.70)', fontFamily: 'alibb-light' }}>
+                        {des}
                     </div>
                 </div>
             </div>
-        );
-    };
+        )
+    }
+
 
 
     return (
         <HeaderLayout>
 
-            <div className=" w-full max-w-[1920px] flex flex-col  items-center  ">
 
-                <div className="flex flex-col  items-center relative">
-                    <Image src={bg_png} className="  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  rotate-12    lg:w-[872px]  lg:h-[731px] " alt="bg" />
+            <div className=" w-full max-w-[1440px] flex flex-col  items-center  ">
+                <div className="w-full max-w-[1440px] flex flex-col  items-center lg:px-[100px]  px-[25px] ">
 
-                    <div className=" mt-10 lg:mt-34 w-64 h-9  rounded-3xl  flex  items-center px-5 " style={{ background: 'linear-gradient(90deg, rgba(222, 151, 247, 0.24) 0%, rgba(178, 148, 245, 0.24) 50%, rgba(155, 177, 253, 0.24) 100%)' }}>
-                        <Image src={star_png} className=" w-8  h-6" alt="bg" />
-                        <div className=" text-sm  text-test" >共建算力中心生态构建目标</div>
-                    </div>
-                    <div className=" mt-6 text-titleColor text-xl lg:text-5xl">以价值创造价值，以梦想成就梦想</div>
-                    <div className=" mt-6 text-titleColor   text-[12px]  lg:text-16px" style={{ color: '#B4BCD0' }}  >AGI问题发现者，算力市场创新者，迎接绿色，人本的 AI 时代</div>
+                    <div className="flex flex-col  items-center relative">
+                        <Image src={bg_png} className="  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  rotate-12    lg:w-[872px]  lg:h-[731px] " alt="bg" />
 
-                    <div className=" mt-15 ">
-                        <Image src={text_png} className="   w-70  lg:w-115   h-20" alt="bg" />
-                    </div>
-                    <div className=" mt-10 lg:mt-59  w-4/5" style={{ height: '1px', background: ' linear-gradient(90deg, rgba(42, 45, 68, 0.00) 0%, #2A2D44 50%, rgba(42, 45, 68, 0.00) 100%)' }}></div>
-                </div>
+                        <div className=" mt-10 lg:mt-34 w-64 h-9  rounded-3xl  flex  items-center px-5 " style={{ background: 'linear-gradient(90deg, rgba(222, 151, 247, 0.24) 0%, rgba(178, 148, 245, 0.24) 50%, rgba(155, 177, 253, 0.24) 100%)' }}>
+                            <Image src={star_png} className=" w-8  h-6" alt="bg" />
+                            <div className=" text-sm  text-test" >共建算力中心生态构建目标</div>
+                        </div>
+                        <div className=" mt-6 text-titleColor text-xl lg:text-5xl">以价值创造价值，以梦想成就梦想</div>
+                        <div className=" mt-6 text-titleColor   text-[12px]  lg:text-16px" style={{ color: '#B4BCD0' }}  >AGI问题发现者，算力市场创新者，迎接绿色，人本的 AI 时代</div>
 
-
-                <div className=" mt-25 w-full text-center ">
-                    <div className="text-2xl lg:text-3xl text-title">
-                        我们的企业
+                        <div className=" mt-15 ">
+                            <Image src={text_png} className="   w-70  lg:w-115   h-20" alt="bg" />
+                        </div>
+                        <div className=" mt-10 lg:mt-59  w-4/5" style={{ height: '1px', background: ' linear-gradient(90deg, rgba(42, 45, 68, 0.00) 0%, #2A2D44 50%, rgba(42, 45, 68, 0.00) 100%)' }}></div>
                     </div>
 
-                    <div className=" px-[100px] flex gap-[142px] mt-[80px]" >
-                        <div className=" ">
-                            <div className=" w-[524px] h-[106px] text-start"><span className=" text-[36px]">隐入</span>科技，一家以创新为驱动力的先锋企业，我们以"以价值成就价值，以梦想实现价值"的核心价值观为行动指南，致力于引领我们进入一个绿色、以人为本的人工智能新时代，作为人工智能通用问题（AGI）的探索者和算力市场的创新引领者，我们不断追求技术与市场的和谐共鸣。</div>
 
-                            <div className=" w-[525px] h-[101px] mt-5 rounded-md" style={{ border: '1px solid #313035', background: '#272E3C' }}>
-                                <div>
-                                    基于对算力作为未来技术发展基石的深刻理解，我们以算力市场平台为核心，汇聚算力资源，紧随AGI技术的发展步伐，我们通过创新性的产品组合，不断实现产品的创建和迭代，为用户提供高效、智能、安全的算力资源服务。
+                    <div className=" mt-15  lg:mt-25 w-full text-center ">
+                        <div className="text-2xl lg:text-3xl text-title">
+                            我们的企业
+                        </div>
+
+                        <div className="  lg:flex lg:gap-[142px] mt-[40px] lg:mt-[80px]" >
+                            <div className=" ">
+                                <div className=" w-full lg:w-[524px] lg:h-[106px] text-start  " style={{ fontFamily: 'alibb-light', color: '#F7F8F8;' }}>
+
+                                    <span className=" text-[16px]  lg:text-[36px] yinrutext " style={{ fontFamily: 'alibb' }}>隐入</span>
+                                    <span className=" text-[12px] lg:text-[16px]" style={{ fontFamily: 'alibb-light', color: '#F7F8F8' }}>科技，一家以创新为驱动力的先锋企业，我们以"以价值成就价值，以梦想实现价值"的核心价值观为行动指南，致力于引领我们进入一个绿色、以人为本的人工智能新时代，作为人工智能通用问题（AGI）的探索者和算力市场的创新引领者，我们不断追求技术与市场的和谐共鸣。</span>
+                                </div>
+                                {!isPC && <div className=" my-6">
+                                    <Image src={ourbg1_png} className="w-full  lg:w-[536px] lg:h-[300px]   " alt="bg" />
+                                </div>}
+                                <div className=" lg:w-[525px] py-5 mt-5 rounded-md" style={{ border: '1px solid #313035', background: '#272E3C' }}>
+                                    <div className=" flex  items-baseline  px-5  gap-2">
+
+                                        <Image src={oursvg1_svg} className="lg:w-[16px] lg:h-[16px]  w-[12px] h-[12px]  " alt="bg" />
+
+                                        <div className=" text-start text-12px lg:text-16px" style={{ color: 'rgba(239, 237, 253, 0.70)', fontFamily: 'alibb-light' }}>
+                                            基于对算力作为未来技术发展基石的深刻理解，我们以算力市场平台为核心，汇聚算力资源，紧随AGI技术的发展步伐，我们通过创新性的产品组合，不断实现产品的创建和迭代，为用户提供高效、智能、安全的算力资源服务。
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <Image src={ourbg1_png} className="w-[536px] h-[300px]   " alt="bg" />
+                            {isPC && <div>
+                                <Image src={ourbg1_png} className="w-full  lg:w-[536px] lg:h-[300px]   " alt="bg" />
+                            </div>}
+
 
                         </div>
+
+
+
 
                     </div>
 
+                    <div className="  mt-20  lg:mt-35 w-full lg:w-[864px] h-[1px]" style={{ background: 'linear-gradient(90deg, rgba(42, 45, 68, 0.00) 0%, #2A2D44 50%, rgba(42, 45, 68, 0.00) 100%)' }}></div>
 
 
+
+                    <div className="  mt-10 lg:mt-28">
+
+                        <div className="text-2xl lg:text-3xl text-title">
+                            我们的团队
+                        </div>
+                    </div>
+
+
+                    <div className=" mt-5 lg:mt-15">
+
+                        <div className=" text-12px  lg:text-16px leading-6" style={{ color: '#EFEDFD', fontFamily: 'alibb-light' }}>
+                            我们的团队由具有丰富技术背景和创业经验的成员组成，涵盖云计算、人工智能、大数据、企业架构及风险管理等领域。核心团队长期致力于高效、低成本算力平台的研究与开发，已成功构建了一个能够整合分布式算力资源的高效网络，致力于解决传统算力中心化带来的高成本和资源浪费问题。
+                        </div>
+                    </div>
+                    <div className=" mt-[30px] lg:mt-[60px] h-[1px]  w-full " style={{ border: '1px solid #2A2D44' }}> </div>
+
+
+
+                    <div className="lg:flex gap-5    lg:mt-15">
+                        <MemberContent name={'高晗 创始人兼CEO'} des={'资深人工智能领域投资人、绿地素本合伙人'} img={gaohan_png}></MemberContent>
+                        <MemberContent name={' 尹荣 创始人兼CTO'} des={'大数据、人工智能、企业架构和风险管理领域专家，前IBM、德勤、华为高级技术与管理专家'} img={yinrong_png}></MemberContent>
+
+
+                    </div>
+                    <div className="lg:flex gap-5 lg:mt-19">
+
+                        <MemberContent name={'张国艳 董事兼CFO'} des={'前P&G销售总监，绿地素本创始人兼CEO'} img={zhangguoyan_png}></MemberContent>
+                        <MemberContent name={'阮明烽 独立董事兼CFA'} des={'浙江工业大学金融系创办人、MBA导师，金融专家、投资专家'} img={ruanmingfeng_png}></MemberContent>
+
+                    </div>
+
+                    <div className=" lg:mt-18  lg:flex  gap-5 ">
+                        <MemberContent name={'杨波 Senior Engineer'} des={'产业大数据、互联网医疗、人工智能项目架构专家，前浙江智慧网络医疗、优健康、火石创造技术总监'} img={yangbo_png}></MemberContent>
+                        <MemberContent name={'陶涛 Senior Engineer'} des={'药理学硕士、丰富医学知识背景、优秀的软件开发者和生信工程师，前同花顺医学部大数据分析师和项目专员'} img={taotao_png}></MemberContent>
+                        <MemberContent name={'邓超 Project Manager'} des={'韩国游戏工程学硕士，生成式人工智能（AGI）、扩展现实（XR）人机交互产品专家'} img={dengchao_png}></MemberContent>
+
+                    </div>
+
+                    <div className=" lg:mt-18  lg:flex gap-5">
+                        <MemberContent name={'王元 Senior Engineer'} des={'工学硕士，前恒生电子区块链高级工程师，在联盟链、交易所、DeFi等领域深耕多年，Web3开源社区贡献者'} img={wangyuan_png}></MemberContent>
+                        <MemberContent name={'赵生宁 AI Engineer'} des={''} img={xiaozhao_png}></MemberContent>
+                        <MemberContent name={'刘杰 Frontend Engineer'} des={''} img={liujie_png}></MemberContent>
+                    </div>
+                    <div className=" lg:mt-18  lg:flex gap-5  justify-start w-full">
+                        <MemberContent name={'邹茜羽 Blockchain Engineer'} des={''} img={xiaoyu_png}></MemberContent>
+                        <MemberContent name={'廖一鸣 AI Engineer'} des={''} img={xiaoliao_png}></MemberContent>
+
+                    </div>
 
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
                 {/* 底部 */}
 
-                <div className=" w-full max-w-[1440px] py-10  ">
-                    <div className=" mt-20 lg:mt-40 h-[1px] " style={{ border: '1px solid #2A2D44' }}> </div>
-
-                    <div className=" px-10 lg:px-25  mt-5 lg:mt-13 justify-between flex ">
-                        <div className=" lg:flex  lg:gap-25">
-                            <div className="text-[12px] lg:text-sm"> LOGO</div>
-                            <div className="flex  lg:gap-13  flex-wrap  gap-1 ">
-                                {textData.map((item, index) => {
-                                    return (
-                                        <BottomText key={index} text={item.name}></BottomText>
-                                    )
-                                })}
-                            </div>
-                        </div>
-                        <div className=" flex gap-5">
-                            <Image src={vx_svg} className="    w-[20px] h-[20px]     " alt="bg" />
-                            <Image src={zh_svg} className="    w-[20px] h-[20px]     " alt="bg" />
-                        </div>
-
-                    </div>
-                    <div className="lg:px-25 lg:mt-10 mt-1 px-10">
-                        <div className="lg:flex gap-13 ">
-                            <div className=" text-[12px]" style={{ color: '#8A8F9' }}>地址：浙江省杭州市滨江区星城中心B座1101</div>
-                            <div className=" text-[12px]" style={{ color: '#8A8F9' }}>邮箱：it@ingru.ai</div>
-                            <div className=" text-[12px]" style={{ color: '#8A8F9' }}>联系电话：+86 17788886513 / 13918186286</div>
-
-                        </div>
-                    </div>
-
-                    {/* <div className="px-25 mt-5  ">
-              <div className="flex gap-13 ">
-                <div className=" text-sm" style={{ color: '#8A8F9' }}>Copyright©2024隐入（杭州）科技有限公司版权所有  |  浙ICP备2024065338号</div>
-
-
-              </div>
-            </div> */}
-                </div>
+                <Footer></Footer>
             </div>
+
 
         </HeaderLayout >
 
