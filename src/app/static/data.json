@@ -1,0 +1,40 @@
+{
+    "tabHeader": [
+        {
+            "tabName": "AI门户",
+            "href": "/fastexperience"
+        },
+        {
+            "tabName": "提供算力",
+            "href": "/providepower"
+        },
+        {
+            "tabName": "使用算力",
+            "href": "/computinguse"
+        },
+        {
+            "tabName": "用户手册",
+            "href": "/accountInfo"
+        }
+    ],
+    "homeCard": [
+        {
+            "title": "AGI快速体验",
+            "description": "开启AGI急速体验之门，先体验，再部署",
+            "buttonText": "AI门户",
+            "href": "/fastexperience"
+        },
+        {
+            "title": "提供算力",
+            "description": "共享闲置算力，加入分布式算力网络，共建高效、可持续的AI算力生态系统",
+            "buttonText": "算力提供",
+            "href": "/providepower"
+        },
+        {
+            "title": "AI应用部署",
+            "description": "界面化部署AI应用，低成本使用算力资源",
+            "buttonText": "算力使用",
+            "href": "/computinguse"
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+
+
+.svg-style{
+    position: relative;
+    left: -1000px;
+    filter: drop-shadow(#404b63 1000px 0);
+}
+
+.link-style:hover .svg-style{
+    position: relative;
+    left: -1000px;
+    filter: drop-shadow(#4183ff 1000px 0);
+}
+
+.svg-style-active{
+    position: relative;
+    left: -1000px;
+    filter: drop-shadow(#4183ff 1000px 0);
+}
+
