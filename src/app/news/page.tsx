@@ -105,12 +105,12 @@ const News: React.FC = () => {
 
     const NewsContent = ({ index, item }) => {
         return (
-
             <>
                 <div className="mt-16 w-full ">
                     <div className="lg:flex   gap-8 ">
+                        <Image src={item.imageSrc} className="w-3/4 h-[120px] mx-auto  lg:w-[320px]  bg-gray-800 rounded-xl lg:h-[168px]" alt="bg" />
 
-                        <div className=" w-3/4 h-[120px] mx-auto  lg:w-[320px]  bg-gray-800 rounded-xl lg:h-[168px]   border" ></div>
+                        {/* <div className=" w-3/4 h-[120px] mx-auto  lg:w-[320px]  bg-gray-800 rounded-xl lg:h-[168px]   border" ></div> */}
                         <div className="flex flex-col max-w-[762px] ">
                             <div className=" mt-10 lg:mt-0 flex flex-col self-stretch px-5  text-base font-light text-violet-100 text-opacity-70  ">
                                 <div className=" text-sm  lg:text-xl  text-white max-md:max-w-full">
@@ -143,7 +143,7 @@ const News: React.FC = () => {
                     <div className="  mt-20 lg:mt-45 text-titleColor text-xl lg:text-5xl">新闻资讯</div>
                     <div className=" mt-6 text-titleColor px-15 lg:px-0    text-center  lg:w-[480px] lg:leading-6 text-[12px]  lg:text-16px" style={{ color: '#B4BCD0', fontFamily: 'alibb-light' }}  >最全面及时的行业资讯、企业动态</div>
                 </div>
-                <div className=" mt-10 lg:mt-34  w-full" style={{ height: '12px', background: ' linear-gradient(90deg, rgba(42, 45, 68, 0.00) 0%, #2A2D44 50%, rgba(42, 45, 68, 0.00) 100%)' }}></div>
+                <div className=" mt-10 lg:mt-34  w-full" style={{ height: '1px', background: ' linear-gradient(90deg, rgba(42, 45, 68, 0.00) 0%, #2A2D44 50%, rgba(42, 45, 68, 0.00) 100%)' }}></div>
 
                 <div className=" mt-[60px] w-full px-[10px] lg:px-[164px]">
 
