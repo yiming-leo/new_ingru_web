@@ -26,6 +26,10 @@ import beacon_png from '@/assets/img/beacon.png';
 import suanli1_png from '@/assets/img/suanli1.png';
 import suanli2_png from '@/assets/img/suanli2.png';
 
+import news1_png from '@/assets/img/news1.png'
+import news2_png from '@/assets/img/news2.png'
+import news3_png from '@/assets/img/news3.png'
+
 import HeaderLayout from "@/components/Layouts/HeaderLayout";
 import Image from "next/image";
 import { title } from "process";
@@ -98,7 +102,7 @@ const News: React.FC = () => {
         );
     };
 
-    const NewsContent = ({ index }) => {
+    const NewsContent = ({ index, item }) => {
         return (
 
             <>
@@ -109,16 +113,10 @@ const News: React.FC = () => {
                         <div className="flex flex-col max-w-[762px] ">
                             <div className=" mt-10 lg:mt-0 flex flex-col self-stretch px-5  text-base font-light text-violet-100 text-opacity-70  ">
                                 <div className=" text-sm  lg:text-xl  text-white max-md:max-w-full">
-                                    超级Agent
+                                    {item.title}
                                 </div>
                                 <div className="mt-2 max-md:max-w-full lg:text-16px text-[12px]" style={{ fontFamily: 'alibb-light' }}>
-                                    预装环境，一键部署，无需运维，热门主流大模型 AI
-                                    程序快速升级，先体验，再部署预装环境，一键部署，无需运维，热门主流大模型
-                                    AI
-                                    程序快速升级，先体验，再部署预装环境，一键部署，无需运维，热门主流大模型
-                                    AI
-                                    程序快速升级，先体验，再部署预装环境，一键部署，无需运维，热门主流大模型
-                                    AI 程序快速升级，先体验，再部署
+                                    {item.description}
                                 </div>
                                 <div className=" mt-2 lg:mt-5 max-md:max-w-full text-12px lg:text-[16px]" style={{ fontFamily: 'alibb-light' }}>2023-01-08 10:00:00</div>
                             </div>
@@ -130,6 +128,10 @@ const News: React.FC = () => {
         )
     }
 
+    const newsData: any = [{ imageSrc: news1_png, icon: icon33_png, title: '隐入（浙江）科技有限公司应邀参加“环...', description: '隐入（浙江）科技有限公司于7月4日应邀参了“康”企乐业“乾”图大展“环浙工大创新经济圈”创业兴业恳...' },
+    { imageSrc: news2_png, icon: icon11_png, title: '爆火的Sora，对医疗领域会有哪些影响？', description: '北京时间2月16日凌晨，OpenAI宣布了一项重大突破：其全新研发的文生视频大模型Sora正式亮相。继...' },
+    { imageSrc: news3_png, icon: icon22_png, title: '孙凝晖院士给正国级、副国级讲课的万字...', description: '中国人大网近日刊登孙凝晖在十四届全国人大常委会专题讲座上的讲稿《人工智能与智能计算的发展》，现...' }
+    ]
 
     return (
         <HeaderLayout>
@@ -137,14 +139,8 @@ const News: React.FC = () => {
 
                 <div className="flex flex-col  items-center relative">
                     <Image src={bg_png} className=" lg:scale-150  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:rotate-[20deg]    lg:w-[872px]  lg:h-[731px] " alt="bg" />
-
-
                     <div className="  mt-20 lg:mt-45 text-titleColor text-xl lg:text-5xl">新闻资讯</div>
                     <div className=" mt-6 text-titleColor px-15 lg:px-0    text-center  lg:w-[480px] lg:leading-6 text-[12px]  lg:text-16px" style={{ color: '#B4BCD0', fontFamily: 'alibb-light' }}  >最全面及时的行业资讯、企业动态</div>
-
-
-
-
                 </div>
                 <div className=" mt-10 lg:mt-34  w-full" style={{ height: '12px', background: ' linear-gradient(90deg, rgba(42, 45, 68, 0.00) 0%, #2A2D44 50%, rgba(42, 45, 68, 0.00) 100%)' }}></div>
 
@@ -152,9 +148,9 @@ const News: React.FC = () => {
 
                     <div className="flex flex-col">
                         <TabMenu></TabMenu>
-                        {[1, 2, 3, 4].map((item, index) => {
+                        {newsData.map((item, index) => {
                             return (
-                                <NewsContent key={index} index={index} />
+                                <NewsContent item={item} key={index} index={index} />
                             )
                         })}
 
