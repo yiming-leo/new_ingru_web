@@ -78,7 +78,7 @@ const Footer: React.FC<any> = () => {
 
             <div className="lg:px-25 px-10 lg:mt-5  mt-1 ">
                 <div className="flex gap-13 ">
-                    <div className=" lg:text-sm text-[12px]" style={{ color: '#8A8F9' }}>Copyright©2024隐入（杭州）科技有限公司版权所有  |  浙ICP备2024065338号</div>
+                    <div className=" lg:text-sm text-[12px]" style={{ color: '#8A8F9' }}>Copyright©2024隐入（杭州）科技有限公司版权所有  |  浙ICP备2024065338号 | 浙公网安备33010802013495号</div>
 
 
                 </div>
