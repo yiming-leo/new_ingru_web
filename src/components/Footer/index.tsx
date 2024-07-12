@@ -71,14 +71,14 @@ const Footer: React.FC<any> = () => {
                 <div className="lg:flex gap-13 ">
                     <div className=" lg:text-sm text-[12px]" style={{ color: '#8A8F9' }}>地址：浙江省杭州市滨江区星城中心A座1601</div>
                     <div className=" lg:text-sm text-[12px]" style={{ color: '#8A8F9' }}>邮箱：it@ingru.ai</div>
-                    <div className=" lg:text-sm text-[12px]" style={{ color: '#8A8F9' }}>联系电话：+86 17788886513 / 13918186286</div>
+                    <div className=" lg:text-sm text-[12px]" style={{ color: '#8A8F9', wordBreak: 'break-all' }}>联系电话：+86 17788886513 /+86 13918186286</div>
 
                 </div>
             </div>
 
             <div className="lg:px-25 px-10 lg:mt-5  mt-1 ">
                 <div className="flex gap-13 ">
-                    <div className=" lg:text-sm text-[12px]" style={{ color: '#8A8F9' }}>Copyright©2024隐入（杭州）科技有限公司版权所有  |  浙ICP备2024065338号 | 浙公网安备33010802013495号</div>
+                    <div className=" lg:text-sm text-[12px] text-start  " style={{ color: '#8A8F9', wordBreak: 'break-all' }}>Copyright©2024隐入（杭州）科技有限公司版权所有  |  浙ICP备2024065338号 | 浙公网安备33010802013495号</div>
 
 
                 </div>
