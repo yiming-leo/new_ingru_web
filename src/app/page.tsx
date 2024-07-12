@@ -206,10 +206,10 @@ const Home: React.FC = () => {
 
 
             <Image src={bg2_png} className=" w-[180px] h-[180px]  lg:w-[389px] lg:h-[433px] absolute  -top-30 left-1/2 transform -translate-x-1/2 rotate-180 " alt="bg" />
-            <div className="  pt-10  lg:pt-80 w-full  ">
+            <div className="  pt-10  sm:pt-60  lg:pt-80 w-full  ">
               <div className=" px-15 lg:px-[320px] w-full">
                 <div className=" text-[25px]  lg:text-[40px] text-p leading-[50px]  text-right lg:px-40">
-                  7000P
+                  &gt;7000P
                 </div>
                 <div className=" flex justify-between mt-3">
 

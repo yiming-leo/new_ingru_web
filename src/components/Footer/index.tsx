@@ -43,7 +43,7 @@ const Footer: React.FC<any> = () => {
             <div className=" mt-20 lg:mt-40 h-[1px] " style={{ border: '1px solid #2A2D44' }}> </div>
 
             <div className=" px-10 lg:px-25  mt-5 lg:mt-13 justify-between flex ">
-                <div className=" lg:flex  lg:gap-25">
+                <div className=" lg:flex  lg:gap-12">
                     {/* <div className="text-[12px] lg:text-sm"> LOGO</div> */}
                     <div className="flex items-center">
                         <Image src={logo_png} className=" w-[15px] h-[15px]    lg:w-[20px]  lg:h-[20px]     " alt="bg" />
