@@ -144,8 +144,8 @@ const Aboutus: React.FC = () => {
                             <div className=" ">
                                 <div className=" w-full lg:w-[524px] lg:h-[106px] text-start  " style={{ fontFamily: 'alibb-light', color: '#F7F8F8;' }}>
 
-                                    <span className=" text-[16px]  lg:text-[36px] yinrutext " style={{ fontFamily: 'alibb' }}>隐入</span>
-                                    <span className=" text-[12px] lg:text-[16px]" style={{ fontFamily: 'alibb-light', color: '#F7F8F8' }}>科技，一家以创新为驱动力的先锋企业，我们以"以价值成就价值，以梦想实现价值"的核心价值观为行动指南，致力于引领我们进入一个绿色、以人为本的人工智能新时代，作为人工智能通用问题（AGI）的探索者和算力市场的创新引领者，我们不断追求技术与市场的和谐共鸣。</span>
+                                    <span className=" text-[16px]  lg:text-[36px] yinrutext" style={{ fontFamily: 'alibb' }}>隐入</span>
+                                    <span className=" text-[12px] lg:text-[16px]" style={{ fontFamily: 'alibb-light', color: '#F7F8F8' }}>科技，一家以创新为驱动力的先锋企业，我们以&quot;以价值成就价值，以梦想实现价值&quot;的核心价值观为行动指南，致力于引领我们进入一个绿色、以人为本的人工智能新时代，作为人工智能通用问题（AGI）的探索者和算力市场的创新引领者，我们不断追求技术与市场的和谐共鸣。</span>
                                 </div>
                                 {!isPC && <div className=" my-6">
                                     <Image src={ourbg1_png} className="w-full  lg:w-[536px] lg:h-[300px]   " alt="bg" />

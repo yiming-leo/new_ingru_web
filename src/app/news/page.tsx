@@ -34,6 +34,7 @@ import HeaderLayout from "@/components/Layouts/HeaderLayout";
 import Image from "next/image";
 import { title } from "process";
 import Footer from "@/components/Footer";
+import { describe } from "node:test";
 
 const News: React.FC = () => {
     const Card = ({ imageSrc, icon, title, description }) => {
@@ -128,9 +129,9 @@ const News: React.FC = () => {
         )
     }
 
-    const newsData: any = [{ imageSrc: news1_png, icon: icon33_png, title: '隐入（浙江）科技有限公司应邀参加“环...', description: '隐入（浙江）科技有限公司于7月4日应邀参了“康”企乐业“乾”图大展“环浙工大创新经济圈”创业兴业恳...' },
-    { imageSrc: news2_png, icon: icon11_png, title: '爆火的Sora，对医疗领域会有哪些影响？', description: '北京时间2月16日凌晨，OpenAI宣布了一项重大突破：其全新研发的文生视频大模型Sora正式亮相。继...' },
-    { imageSrc: news3_png, icon: icon22_png, title: '孙凝晖院士给正国级、副国级讲课的万字...', description: '中国人大网近日刊登孙凝晖在十四届全国人大常委会专题讲座上的讲稿《人工智能与智能计算的发展》，现...' }
+    const newsData: any = [{ imageSrc: news1_png, icon: icon33_png, title: '隐入（浙江）科技有限公司应邀参加“环浙工大创新经济圈“ 创业兴业恳谈会成功签...', description: '隐入（浙江）科技有限公司于7月4日应邀参加了“康”企乐业“乾”图大展“环浙工大创新经济圈”创业兴业恳谈会暨半年度“人工智能+”产业链项目集中签约活动，并在此次活动中成功签约重要合作项目。彰显了公司在推动人工智能应用和行业发展方面的地位及未来发展愿景。' },
+    { imageSrc: news2_png, icon: icon11_png, title: '爆火的Sora，对医疗领域会有哪些影响？', description: '北京时间2月16日凌晨，OpenAI宣布了一项重大突破：其全新研发的文生视频大模型Sora正式亮相。继文字、图片之后，全世界再一次被OpenAI震撼了。几乎没有AI制作痕迹的流畅视频，让社交媒体惊呼：现实，是不是不存在了？' },
+    { imageSrc: news3_png, icon: icon22_png, title: '孙凝晖院士给正国级、副国级讲课的万字长稿发布——《人工智能与智能计算的发展》', description: '中国人大网近日刊登孙凝晖在十四届全国人大常委会专题讲座上的讲稿《人工智能与智能计算的发展》，现将全文转载如下，让我们一同走进高深莫测的人工智能世界。' }
     ]
 
     return (
