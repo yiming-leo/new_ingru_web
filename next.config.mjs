@@ -21,6 +21,8 @@ const CORS_HEADERS = [
   },
 ];
 
+
+
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
@@ -66,6 +68,8 @@ const nextConfig = {
 
   concurrentFeatures: true,
   webpack: (config, { isServer }) => {
+
+    config.optimization.minimize = true;
     // 添加file-loader和url-loader配置
     config.module.rules.push({
       test: /\.(mp4|webm)$/,
