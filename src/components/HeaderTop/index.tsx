@@ -12,6 +12,7 @@ import Router from 'next/router'
 
 import myuser_svg from '@/assets/svg/myuser.svg';
 import logo_png from '@/assets/img/logo.png';
+import xiala_svg from '@/assets/svg/xiala.svg';
 import menu_svg from '@/assets/svg/menu.svg';
 import path from "path";
 import { useStore } from "@/store/useStore";
@@ -47,8 +48,8 @@ const NavItem: React.FC<NavItemProps> = ({ text, href, isActive, index }) => {
     {
       key: '1',
       label: (
-        <Link className={`text-sm text-fontColor flex justify-center items-center `} style={{ color: '#565656' }} href="/tradingmarket">
-          <div className=" text-fontColor">算力交易市场</div>
+        <Link className={`text-sm text-fontColor flex justify-center items-center `} href="/tradingmarket">
+          <div className=" text-[#ADADAD] hover:text-gray z-20">算力交易市场</div>
         </Link>
       ),
     },
@@ -69,13 +70,14 @@ const NavItem: React.FC<NavItemProps> = ({ text, href, isActive, index }) => {
 
     <div onClick={() => {
       goLink()
-    }} className={` cursor-pointer my-auto rounded-md  ${isActive ? 'text-white' : ' text-grayDeafult'}   hover:text-white  py-2 text-sm  `} >
-      {index == 1 && <Dropdown menu={{ items }} placement="bottom"  >
-        <div className="flex gap-1">
+    }} className={` cursor-pointer my-auto rounded-md  ${isActive ? 'text-white underline' : ' text-grayDeafult'}   hover:text-white  py-2 text-sm  `} >
+      {index == 1 && <Dropdown menu={{ items }} placement="bottomLeft"  >
+        <div className="flex gap-1 justify-center items-center">
           <div>{text}</div>
           <div className="">
+            <div className={`w-[8px]    h-[8px] bg-gray-500 transform rotate-[-45deg] border-t-transparent border-r-transparent    -translate-y-1/4 ${isActive ? 'border-white' : 'border-[#ADADAD]'}  border-[2px] rounded-[1px]`}>
+            </div>
 
-            <DownOutlined style={{ width: '15px', }} />
 
 
 

@@ -81,15 +81,15 @@ const Home: React.FC = () => {
 
   const NewsCard = ({ imageSrc, icon, title, description }) => {
     return (
-      <div className="mt-10 lg:mt-0 flex-1">
+      <div className=" flex-1 lg:w-[380px] mt-10 lg:mt-0 cursor-pointer " >
         <Image src={imageSrc} className=" h-[200px] " alt="bg" />
         {/* <div className=" h-[200px] border" /> */}
 
         <div className="mt-5">
           <div className="flex items-center gap-[10px]">
-            <div className="text-white text-xl">{title}</div>
+            <div className="text-white  text-sm  lg:text-xl hover:underline  line-clamp-1">{title}</div>
           </div>
-          <div className="mt-3 text-16px" style={{ color: 'rgba(239, 237, 253, 0.70)', fontFamily: 'alibb-light' }}>
+          <div className="mt-3   text-[12px]   lg:text-16px w-full    line-clamp-2  text-justify break-all " style={{ color: 'rgba(239, 237, 253, 0.70)', fontFamily: 'alibb-light', }}>
             {description}
           </div>
         </div>
@@ -97,9 +97,9 @@ const Home: React.FC = () => {
     );
   };
 
-  const newsData: any = [{ imageSrc: news1_png, icon: icon33_png, title: '隐入（浙江）科技有限公司应邀参加“环...', description: '隐入（浙江）科技有限公司于7月4日应邀参了“康”企乐业“乾”图大展“环浙工大创新经济圈”创业兴业恳...' },
+  const newsData: any = [{ imageSrc: news1_png, icon: icon33_png, title: '隐入（浙江）科技有限公司应邀参加“环浙工大创新经济圈“ 创业兴业恳谈会成功签...', description: '隐入（浙江）科技有限公司于7月4日应邀参加了“康”企乐业“乾”图大展“环浙工大创新经济圈”创业兴业恳谈会暨半年度“人工智能+”产业链项目集中签约活动，并在此次活动中成功签约重要合作项目。彰显了公司在推动人工智能应用和行业发展方面的地位及未来发展愿景。' },
   { imageSrc: news2_png, icon: icon11_png, title: '爆火的Sora，对医疗领域会有哪些影响？', description: '北京时间2月16日凌晨，OpenAI宣布了一项重大突破：其全新研发的文生视频大模型Sora正式亮相。继...' },
-  { imageSrc: news3_png, icon: icon22_png, title: '孙凝晖院士给正国级、副国级讲课的万字...', description: '中国人大网近日刊登孙凝晖在十四届全国人大常委会专题讲座上的讲稿《人工智能与智能计算的发展》，现...' }
+  { imageSrc: news3_png, icon: icon22_png, title: '孙凝晖院士给正国级、副国级讲课的万字长稿发布——《人工智能与智能计算的发展》', description: '中国人大网近日刊登孙凝晖在十四届全国人大常委会专题讲座上的讲稿《人工智能与智能计算的发展》，现...' }
   ]
 
 
@@ -113,7 +113,7 @@ const Home: React.FC = () => {
 
           <div className=" mt-10 lg:mt-34 w-64 h-9  rounded-3xl  flex  items-center px-5 " style={{ background: 'linear-gradient(90deg, rgba(222, 151, 247, 0.24) 0%, rgba(178, 148, 245, 0.24) 50%, rgba(155, 177, 253, 0.24) 100%)' }}>
             <Image src={star_png} className=" w-8  h-6" alt="bg" />
-            <div className=" text-sm  text-test" >共建算力中心生态构建目标</div>
+            <div className=" text-sm  text-test" >构建算力生态，引领算力市场</div>
           </div>
           <div className=" mt-6 text-titleColor text-xl lg:text-5xl">以价值创造价值，以梦想成就梦想</div>
           <div className=" mt-6 text-titleColor   text-[12px]  lg:text-16px" style={{ color: '#B4BCD0' }}  >AGI问题发现者，算力市场创新者，迎接绿色，人本的 AI 时代</div>

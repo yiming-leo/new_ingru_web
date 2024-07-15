@@ -20,7 +20,7 @@ import logo_png from '@/assets/img/logo.png';
 const Footer: React.FC<any> = () => {
 
     const BottomText = ({ text }) => {
-        return <div className="  text-[12px] lg:text-sm   cursor-pointer">
+        return <div className=" hover:text-white   text-[12px] lg:text-sm   cursor-pointer">
             {text}
         </div>
     }
