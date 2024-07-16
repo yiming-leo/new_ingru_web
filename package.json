@@ -6,7 +6,10 @@
     "dev": "next dev ",
     "build": "next build ",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d out",
+    "push-gh-pages": "npm run deploy"
   },
   "dependencies": {
     "antd": "^5.17.3",
