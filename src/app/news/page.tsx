@@ -35,6 +35,7 @@ import Image from "next/image";
 import { title } from "process";
 import Footer from "@/components/Footer";
 import { describe } from "node:test";
+import { useRouter } from "next/navigation";
 
 const News: React.FC = () => {
     const Card = ({ imageSrc, icon, title, description }) => {
@@ -55,11 +56,7 @@ const News: React.FC = () => {
         );
     };
 
-    const BottomText = ({ text }) => {
-        return <div className="  text-[12px] lg:text-sm   cursor-pointer">
-            {text}
-        </div>
-    }
+
 
     const textData = [{
         name: '产品',
@@ -103,11 +100,16 @@ const News: React.FC = () => {
         );
     };
 
+    const router = useRouter()
+    const toNewsContent = (id) => {
+        router.push(`/news/newsdetail/${id + 1}/`)
+    }
+
     const NewsContent = ({ index, item }) => {
         return (
             <>
                 <div className="mt-16 w-full ">
-                    <div className="lg:flex   gap-8 cursor-pointer z-200  relative ">
+                    <div className="lg:flex   gap-8 cursor-pointer z-200  relative " onClick={() => toNewsContent(index)}>
                         <Image src={item.imageSrc} className="w-3/4 h-[120px] mx-auto  lg:w-[320px]  bg-gray-800 rounded-xl lg:h-[168px]" alt="bg" />
 
                         {/* <div className=" w-3/4 h-[120px] mx-auto  lg:w-[320px]  bg-gray-800 rounded-xl lg:h-[168px]   border" ></div> */}

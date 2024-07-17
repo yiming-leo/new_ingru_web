@@ -31,6 +31,7 @@ import HeaderLayout from "@/components/Layouts/HeaderLayout";
 import Image from "next/image";
 import { title } from "process";
 import Footer from "@/components/Footer";
+import { useRouter } from "next/navigation";
 
 const Home: React.FC = () => {
   const Card = ({ imageSrc, icon, title, description }) => {
@@ -78,18 +79,21 @@ const Home: React.FC = () => {
   { imageSrc: agentNet_png, icon: icon11_png, title: 'AgentNet', description: '多智能体系统，系统Agent进行智能编排调控，具备自主决策、感知环境' },
   { imageSrc: LMCloud_png, icon: icon22_png, title: 'LM Cloud', description: '大模型云平台，支撑AGI计算基础设施能力，助力用户低成本部署AGI模型及应用' }
   ]
+  const router = useRouter()
+  const toNewsContent = (id) => {
+    router.push(`/news/newsdetail/${id + 1}/`)
+  }
 
-  const NewsCard = ({ imageSrc, icon, title, description }) => {
+  const NewsCard = ({ index, imageSrc, icon, title, description }) => {
     return (
-      <div className=" flex-1 lg:w-[380px] mt-10 lg:mt-0 cursor-pointer " >
-        <Image src={imageSrc} className=" h-[200px] " alt="bg" />
+      <div className=" flex-1 lg:w-[380px] mt-10 lg:mt-0 cursor-pointer " onClick={() => toNewsContent(index)} >
+        <Image src={imageSrc} className=" h-[200px]  " alt="bg" />
         {/* <div className=" h-[200px] border" /> */}
-
         <div className="mt-5">
           <div className="flex items-center gap-[10px]">
             <div className="text-white  text-sm  lg:text-xl hover:underline  line-clamp-1">{title}</div>
           </div>
-          <div className="mt-3   text-[12px]   lg:text-16px w-full    line-clamp-2  text-justify break-all " style={{ color: 'rgba(239, 237, 253, 0.70)', fontFamily: 'alibb-light', }}>
+          <div className="mt-3   text-[12px]   lg:text-16px w-full    font-light  line-clamp-2  text-justify break-all " style={{ color: 'rgba(239, 237, 253, 0.70)', fontFamily: 'alibb-light', }}>
             {description}
           </div>
         </div>
@@ -101,7 +105,6 @@ const Home: React.FC = () => {
   { imageSrc: news2_png, icon: icon11_png, title: '爆火的Sora，对医疗领域会有哪些影响？', description: '北京时间2月16日凌晨，OpenAI宣布了一项重大突破：其全新研发的文生视频大模型Sora正式亮相。继...' },
   { imageSrc: news3_png, icon: icon22_png, title: '孙凝晖院士给正国级、副国级讲课的万字长稿发布——《人工智能与智能计算的发展》', description: '中国人大网近日刊登孙凝晖在十四届全国人大常委会专题讲座上的讲稿《人工智能与智能计算的发展》，现...' }
   ]
-
 
   return (
     <HeaderLayout>
@@ -117,7 +120,6 @@ const Home: React.FC = () => {
           </div>
           <div className=" mt-6 text-titleColor text-xl lg:text-5xl">以价值创造价值，以梦想成就梦想</div>
           <div className=" mt-6 text-titleColor   text-[12px]  lg:text-16px" style={{ color: '#B4BCD0' }}  >AGI问题发现者，算力市场创新者，迎接绿色，人本的 AI 时代</div>
-
           <div className=" mt-15 ">
             <Image src={text_png} className="   w-70  lg:w-115   h-20" alt="bg" />
           </div>
@@ -136,13 +138,9 @@ const Home: React.FC = () => {
           <div className="text-2xl lg:text-3xl text-title">
             一键生成一键部署
           </div>
-
-
-
         </div>
 
         <Image src={camera_png} className=" mt-20  w-80   h-39" alt="bg" />
-
 
         <div className=" mt-6 flex  gap-4  justify-center flex-col   w-65   items-start">
           <div className=" flex gap-2 items-center justify-center  w-full lg:justify-start">
@@ -155,10 +153,8 @@ const Home: React.FC = () => {
             共享闲置算力，赚取算力点，加入分布式算力网络，共建高效
           </div>
         </div>
-
         {isPC && <div className=" mt-25" >
           <div className=" h-[1px] w-50 transform  rotate-90 relative" style={{ background: '   linear-gradient(90deg, rgba(61, 65, 97, 0.00) 0%, rgba(61, 65, 97, 0.45) 20%, #3D4161 50%, rgba(61, 65, 97, 0.41) 79.5%, rgba(61, 65, 97, 0.00) 100%)' }}>
-
             <div className="  absolute top-1/2 left-1/2 transform  rotate-90 -translate-x-1/2 -translate-y-1/2  w-[844px] h-[1px] " style={{ background: '#3D4161' }}>
               <div className=" absolute -right-[50px]  -top-[50px] w-25 h-[1px] transform  rotate-90 z-20" style={{ background: '   linear-gradient(90deg, rgba(61, 65, 97, 0.00) 0%, rgba(61, 65, 97, 0.45) 20%, #3D4161 50%, rgba(61, 65, 97, 0.41) 79.5%, rgba(61, 65, 97, 0.00) 100%)' }}></div>
               <div className=" absolute -left-[50px]  -top-[50px] w-25 h-[1px] transform  rotate-90 z-20" style={{ background: '   linear-gradient(90deg, rgba(61, 65, 97, 0.00) 0%, rgba(61, 65, 97, 0.45) 20%, #3D4161 50%, rgba(61, 65, 97, 0.41) 79.5%, rgba(61, 65, 97, 0.00) 100%)' }}></div>
@@ -168,11 +164,7 @@ const Home: React.FC = () => {
         </div>}
 
         {!isPC && <div className="w-[1px] h-[100px]  mt-5" style={{ background: ' linear-gradient(90deg, rgba(61, 65, 97, 0.00) 0%, rgba(61, 65, 97, 0.45) 20%, #3D4161 50%, rgba(61, 65, 97, 0.41) 79.5%, rgba(61, 65, 97, 0.00) 100%)' }}></div>}
-
-
-
         <div className={`lg:mt-[100px]  lg:gap-25 justify-center w-full lg:flex `} >
-
           {cardData.map((item, index) => {
             return <Card key={index} imageSrc={item.imageSrc} icon={item.icon} title={item.title} description={item.description}></Card>
           })}
@@ -199,12 +191,7 @@ const Home: React.FC = () => {
 
         {/* 圆圈内容区域 */}
         <div className="  mt-[154px]  ">
-
-
-
           <div className="  w-screen max-w-[1440px] max-h-[1440px]  lg:h-[100vw] h-[100vw] relative  " style={{ borderRadius: '50%', background: 'linear-gradient(180deg, #000212 36.97%, #222555 200%)', boxShadow: '0px 4px 200px 0px rgba(120, 119, 198, 0.40)' }}>
-
-
             <Image src={bg2_png} className=" w-[180px] h-[180px]  lg:w-[389px] lg:h-[433px] absolute  -top-30 left-1/2 transform -translate-x-1/2 rotate-180 " alt="bg" />
             <div className="  pt-10  sm:pt-60  lg:pt-80 w-full  ">
               <div className=" px-15 lg:px-[320px] w-full">
@@ -239,12 +226,12 @@ const Home: React.FC = () => {
               </div>
 
               {isPC && <div className=" px-25  mt-40  ">
-                <div className=" text-center text-4xl newsTitle">我们的新闻中心</div>
+                <div className=" text-center text-4xl newsTitle">新闻中心</div>
 
                 <div className="flex  mt-15  gap-13 justify-center">
 
                   {newsData.map((item, index) => {
-                    return <NewsCard key={index} imageSrc={item.imageSrc} icon={item.icon} title={item.title} description={item.description}></NewsCard>
+                    return <NewsCard index={index} key={index} imageSrc={item.imageSrc} icon={item.icon} title={item.title} description={item.description}></NewsCard>
                   })}
                 </div>
 
@@ -256,7 +243,7 @@ const Home: React.FC = () => {
           </div>
         </div>
         {!isPC && <div className=" px-8  mt-20  ">
-          <div className=" text-center text-3xl  newsTitle">我们的新闻中心</div>
+          <div className=" text-center text-3xl  newsTitle">新闻中心</div>
 
           <div className="  mt-10  gap-13 justify-center">
 

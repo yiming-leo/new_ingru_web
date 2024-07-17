@@ -1,17 +1,14 @@
 @font-face {
     font-family: 'alibb';
-    src: url('../fonts/Alibaba-PuHuiTi-Regular.ttf') 
+    src: url('../fonts/Alibaba-PuHuiTi-Regular.ttf')
 }
 
 @font-face {
     font-family: 'alibb-light';
-    src: url('../fonts/Alibaba-PuHuiTi-Light.ttf') 
+    src: url('../fonts/Alibaba-PuHuiTi-Light.ttf')
 }
 
-@font-face {
-    font-family: 'youshe';
-    src: url('../fonts/YouSheBiaoTiHei-2.ttf') 
-}
+
 
 body {
     font-family: 'alibb' !important;

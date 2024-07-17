@@ -5,7 +5,7 @@ export function generateStaticParams() {
 }
 const NewsDetail = ({ params }) => {
   const id = params.id
-  return <News></News>
+  return <News id={id}></News>
 
 }
 export default NewsDetail
