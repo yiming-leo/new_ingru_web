@@ -113,8 +113,6 @@ const Aboutus: React.FC = () => {
 
     return (
         <HeaderLayout>
-
-
             <div className=" w-full max-w-[1440px] flex flex-col  items-center  ">
                 <div className="w-full max-w-[1440px] flex flex-col  items-center lg:px-[100px]  px-[25px] ">
 

@@ -8,7 +8,7 @@ import Loader from "@/components/common/Loader";
 import Head from "next/head";
 import type { Metadata } from 'next'
 import dynamic from "next/dynamic";
-// import Adaptation from "@/components/common/Adaptation";
+import Adaptation from "@/components/common/Adaptation";
 
 export const metadata: Metadata = {
   title: '隐入科技',
@@ -22,16 +22,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  // const Adaptation = React.lazy(() => import('@/components/common/Adaptation'));
-  const Adaptation = dynamic(() => import('@/components/common/Adaptation'));
+
+  // const Adaptation = dynamic(() => import('@/components/common/Adaptation'));
   return (
     <html lang="CN">
       <body suppressHydrationWarning={true}>
-        <Suspense fallback={<Loader />}>
+        {/* <Suspense fallback={<Loader />}>
           <Adaptation >
             {children}
           </Adaptation>
-        </Suspense>
+        </Suspense> */}
+        <Adaptation >
+          {children}
+        </Adaptation>
 
       </body>
     </html>

@@ -156,6 +156,10 @@ const HeaderTop = () => {
     }
   }, [prevScrollPos, isPC]);
 
+  const reload = () => {
+    location.reload();
+  }
+
 
   return (
     <>
@@ -178,7 +182,7 @@ const HeaderTop = () => {
           <div className={`flex gap-3  h-full px-10  lg:px-39 justify-between items-center lg:justify-start`}  >
             <Link href={'/'} className="flex  cursor-pointer items-center">
               <Image src={logo_png} className=" cursor-pointer  w-5 h-5 aspect-square" alt="Company Logo" />
-              <div className=" text-white ml-2">隐入科技</div>
+              <div className=" text-white ml-2" onClick={reload}>隐入科技</div>
             </Link>
 
             <nav className=" hidden  lg:flex  gap-14  justify-between items-center my-auto ml-18  ">

@@ -7,9 +7,7 @@ import React, { Suspense, lazy } from 'react';
 
 const Adaptation = ({ children }) => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
-
     const { isPC, setIsPC } = useStore();
-
     const [loading, setLoading] = useState<boolean>(true);
     useEffect(() => {
         setTimeout(() => setLoading(false), 0);
