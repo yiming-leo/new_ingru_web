@@ -120,7 +120,7 @@ const Home: React.FC = () => {
                         <div className=" text-sm  text-test" >算力交易市场</div>
                     </div>
                     <div className=" mt-6 text-titleColor text-xl lg:text-5xl">人人提供算力，人人使用算力</div>
-                    <div className=" mt-6 text-titleColor px-15 lg:px-0    text-center  lg:text-start lg:w-[480px] lg:leading-6 text-[12px]  lg:text-16px" style={{ color: '#B4BCD0' }}  >算力交易新生态，优化资源配置，激发闲置算力，共创算力市场繁荣 打造算力统一大市场</div>
+                    <div className=" mt-6 text-titleColor px-15 lg:px-0    text-center  lg:text-start lg:w-[480px] lg:leading-6 text-[12px]  lg:text-16px" style={{ color: '#B4BCD0', fontFamily: 'alibb-light' }}  >算力交易新生态，优化资源配置，激发闲置算力，共创算力市场繁荣 打造算力统一大市场</div>
 
 
                     <div className=" mt-8  w-full px-16 flex justify-center lg:justify-start  ">
