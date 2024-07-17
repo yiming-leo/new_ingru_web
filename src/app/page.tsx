@@ -81,10 +81,13 @@ const Home: React.FC = () => {
   ]
   const router = useRouter()
   const toNewsContent = (id) => {
-    router.push(`/news/newsdetail/${id + 1}/`)
+    const nextNum = Number(id) + 1
+
+    router.push(`/news/newsdetail/${nextNum}/`)
   }
 
   const NewsCard = ({ index, imageSrc, icon, title, description }) => {
+    console.log(index, 'iiidd')
     return (
       <div className=" flex-1 lg:w-[380px] mt-10 lg:mt-0 cursor-pointer " onClick={() => toNewsContent(index)} >
         <Image src={imageSrc} className=" h-[200px]  " alt="bg" />
@@ -248,7 +251,7 @@ const Home: React.FC = () => {
           <div className="  mt-10  gap-13 justify-center">
 
             {newsData.map((item, index) => {
-              return <NewsCard key={index} imageSrc={item.imageSrc} icon={item.icon} title={item.title} description={item.description}></NewsCard>
+              return <NewsCard index={index} key={index} imageSrc={item.imageSrc} icon={item.icon} title={item.title} description={item.description}></NewsCard>
             })}
           </div>
 

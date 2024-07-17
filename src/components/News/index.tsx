@@ -66,11 +66,11 @@ const News: React.FC = ({ id }) => {
                     <div className="flex gap-5 px-px mt-11 ">
                         <div className="flex flex-col flex-1">
                             {id != 1 && <div className="text-white cursor-pointer  text-[14px]" onClick={lastPage}>上一篇</div>}
-                            {id != 1 && <div className="text-white cursor-pointer text-12px hover:underline" onClick={lastPage}>{title?.last}</div>}
+                            {id != 1 && <div className="text-white cursor-pointer text-12px hover:underline line-clamp-1" onClick={lastPage}>{title?.last}</div>}
                         </div>
                         <div className="flex flex-col flex-1">
                             {id != 3 && <div className="self-end text-white cursor-pointer text-[14px]" onClick={nextPage}>下一篇</div>}
-                            {id != 3 && <div className="self-end text-white cursor-pointer text-12px  hover:underline" onClick={nextPage}>{title?.next}</div>}
+                            {id != 3 && <div className="self-end text-white cursor-pointer text-12px  hover:underline line-clamp-1" onClick={nextPage}>{title?.next}</div>}
                         </div>
                     </div>
                 </div>
