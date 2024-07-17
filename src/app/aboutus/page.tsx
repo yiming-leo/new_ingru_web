@@ -126,7 +126,7 @@ const Aboutus: React.FC = () => {
                             <div className=" text-sm  text-test" >共建算力中心生态构建目标</div>
                         </div>
                         <div className=" mt-6 text-titleColor text-xl lg:text-5xl">以价值创造价值，以梦想成就梦想</div>
-                        <div className=" mt-6 text-titleColor   text-[12px]  lg:text-16px" style={{ color: '#B4BCD0' }}  >AGI问题发现者，算力市场创新者，迎接绿色，人本的 AI 时代</div>
+                        <div className=" mt-6 text-titleColor   text-[12px]  lg:text-16px" style={{ color: '#B4BCD0', fontFamily: 'alibb-light' }}  >AGI问题发现者，算力市场创新者，迎接绿色，人本的 AI 时代</div>
 
                         <div className=" mt-15 ">
                             <Image src={text_png} className="   w-70  lg:w-115   h-20" alt="bg" />
