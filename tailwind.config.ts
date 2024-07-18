@@ -7,6 +7,9 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  // corePlugins: {
+  //   preflight: false, // 禁用 Tailwind 的预飞行（preflight）样式
+  // },
   darkMode: "class",
   theme: {
     fontFamily: {

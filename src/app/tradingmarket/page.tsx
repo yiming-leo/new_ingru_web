@@ -78,9 +78,9 @@ const Home: React.FC = () => {
 
     const { isPC, setIsPC } = useStore();
 
-    const cardData: any = [{ imageSrc: safe_png, icon: icon33_png, title: 'DeKnow', description: '新一代内容平台，利用大模型实现文本、图像、语音等实现结构化内容生成' },
-    { imageSrc: agentNet_png, icon: icon11_png, title: 'AgentNet', description: '多智能体系统，系统Agent进行智能编排调控，具备自主决策、感知环境' },
-    { imageSrc: LMCloud_png, icon: icon22_png, title: 'LM Cloud', description: '大模型云平台，支撑AGI计算基础设施能力，助力用户低成本部署AGI模型及应用' }
+    const cardData: any = [{ imageSrc: safe_png, icon: icon33_png, title: 'DeKnow', description: '新一代内容平台，利用大模型实现结构化内容输出' },
+    { imageSrc: agentNet_png, icon: icon11_png, title: 'AgentNet', description: '智能体网络，分布式多智能体即服务，系统Agent智能编排调控' },
+    { imageSrc: LMCloud_png, icon: icon22_png, title: 'LM Cloud', description: '大模型云平台，规模化、标准化、高效能的生成式AGI计算基础设施' }
     ]
 
     const NewsCard = ({ imageSrc, icon, title, description }) => {
@@ -120,7 +120,7 @@ const Home: React.FC = () => {
                         <div className=" text-sm  text-test" >算力交易市场</div>
                     </div>
                     <div className=" mt-6 text-titleColor text-xl lg:text-5xl">人人提供算力，人人使用算力</div>
-                    <div className=" mt-6 text-titleColor px-15 lg:px-0    text-center  lg:text-start lg:w-[480px] lg:leading-6 text-[12px]  lg:text-16px" style={{ color: '#B4BCD0' }}  >算力交易新生态，优化资源配置，激发闲置算力，共创算力市场繁荣 打造算力统一大市场</div>
+                    <div className=" mt-6 text-titleColor px-15 lg:px-0    text-center  lg:text-start lg:w-[480px] lg:leading-6 text-[12px]  lg:text-16px" style={{ color: '#B4BCD0', fontFamily: 'alibb-light' }}  >算力交易新生态，优化资源配置，激发闲置算力，共创算力市场繁荣 打造算力统一大市场</div>
 
 
                     <div className=" mt-8  w-full px-16 flex justify-center lg:justify-start  ">

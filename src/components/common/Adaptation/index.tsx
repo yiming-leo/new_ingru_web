@@ -3,12 +3,15 @@ import { useEffect, useState } from "react";
 
 import Loader from "../Loader";
 import { useStore } from '@/store/useStore'
+import React, { Suspense, lazy } from 'react';
 
 const Adaptation = ({ children }) => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
-    const [loading, setLoading] = useState<boolean>(true);
     const { isPC, setIsPC } = useStore();
-
+    const [loading, setLoading] = useState<boolean>(true);
+    useEffect(() => {
+        setTimeout(() => setLoading(false), 0);
+    }, []);
 
     useEffect(() => {
         if (window.innerWidth < 1024) {
@@ -35,7 +38,10 @@ const Adaptation = ({ children }) => {
 
     return (
         <div>
-            {children}
+
+            {/* {children} */}
+
+            {loading ? <Loader /> : children}
         </div>
     );
 };

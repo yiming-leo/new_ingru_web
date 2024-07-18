@@ -239,7 +239,13 @@ height: 40px !important;
 }
 
 :where(.css-dev-only-do-not-override-17seli4).ant-dropdown .ant-dropdown-menu {
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    background: #000 !important;
+    /* padding: 0px */
+}
+
+:where(.css-17seli4).ant-dropdown .ant-dropdown-menu {
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
     background: #000 !important;
     /* padding: 0px */
 }
@@ -273,8 +279,6 @@ height: 40px !important;
 
 }
 
-
-
 .use-table .ant-table-cell {
 
     /* background-color:#FAFAFC !important; */
@@ -299,14 +303,7 @@ height: 40px !important;
 
 
 
-.ant-table-thead>tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)>td,
-.ant-table-tbody>tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)>td,
-.ant-table-thead>tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)>td,
-.ant-table-tbody>tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)>td {
-    /* border: 2px solid #306DDD; */
 
-    /* background: #FFF !important; */
-}
 
 
 
@@ -356,6 +353,28 @@ height: 40px !important;
     .inbox-height {
         @apply h-[calc(100vh_-_8.125rem)] lg:h-[calc(100vh_-_5.625rem)];
     }
+}
+
+
+@layer components {
+    .rich-text h1 {
+        @apply text-2xl font-bold text-white;
+    }
+
+    .rich-text h2 {
+        @apply text-xl font-bold;
+    }
+
+    .rich-text img {
+        @apply lg:w-1/2 w-full mx-auto;
+    }
+
+
+    .rich-text p {
+        @apply text-justify break-all w-full block py-5 lg:py-2;
+    }
+
+
 }
 
 /* third-party libraries CSS */
