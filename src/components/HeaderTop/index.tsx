@@ -75,7 +75,7 @@ const NavItem: React.FC<NavItemProps> = ({ text, href, isActive, index }) => {
         <div className="flex gap-1 justify-center items-center">
           <div>{text}</div>
           <div className="">
-            <div className={`w-[8px]    h-[8px] bg-gray-500 transform rotate-[-45deg] border-t-transparent border-r-transparent    -translate-y-1/4 ${isActive ? 'border-white' : 'border-[#ADADAD]'}  border-[2px] rounded-[1px]`}>
+            <div className={`w-[7px]    h-[7px] bg-gray-500 transform rotate-[-45deg] border-t-transparent border-r-transparent    -translate-y-1/4 ${isActive ? 'border-white' : 'border-[#ADADAD]'}  border-[2px] rounded-[1px]`}>
             </div>
 
 
@@ -199,9 +199,9 @@ const HeaderTop = () => {
           </div>
 
 
-          <div className="w-full lg:px-39 " >
+          {/* <div className="w-full lg:px-39 " >
             <div style={{ height: '1px', background: 'rgba(255, 255, 255, 0.12)' }}></div>
-          </div>
+          </div> */}
         </header>
 
 

@@ -75,9 +75,9 @@ const Home: React.FC = () => {
 
   const { isPC, setIsPC } = useStore();
 
-  const cardData: any = [{ imageSrc: safe_png, icon: icon33_png, title: 'DeKnow', description: '新一代内容平台，利用大模型实现文本、图像、语音等实现结构化内容生成' },
-  { imageSrc: agentNet_png, icon: icon11_png, title: 'AgentNet', description: '多智能体系统，系统Agent进行智能编排调控，具备自主决策、感知环境' },
-  { imageSrc: LMCloud_png, icon: icon22_png, title: 'LM Cloud', description: '大模型云平台，支撑AGI计算基础设施能力，助力用户低成本部署AGI模型及应用' }
+  const cardData: any = [{ imageSrc: safe_png, icon: icon33_png, title: 'DeKnow', description: '新一代内容平台，利用大模型实现结构化内容输出' },
+  { imageSrc: agentNet_png, icon: icon11_png, title: 'AgentNet', description: '智能体网络，分布式多智能体即服务，系统Agent智能编排调控' },
+  { imageSrc: LMCloud_png, icon: icon22_png, title: 'LM Cloud', description: '大模型云平台，规模化、标准化、高效能的生成式AGI计算基础设施' }
   ]
   const router = useRouter()
   const toNewsContent = (id) => {
@@ -177,7 +177,7 @@ const Home: React.FC = () => {
         <div className="  mt-20  lg:mt-67 w-full lg:w-[864px] h-[1px]" style={{ background: 'linear-gradient(90deg, rgba(42, 45, 68, 0.00) 0%, #2A2D44 50%, rgba(42, 45, 68, 0.00) 100%)' }}></div>
         <div className=" px-4    mt-15 lg:mt-29  w-40 h-9 rounded-2xl  flex items-center gap-1  " style={{ border: '1px solid #7877C6' }}>
           <Image src={arrows_png} className=" w-5  h-5" alt="bg" />
-          <div className=" text-[16px] text-white">振金地图一揽</div>
+          <div className=" text-[16px] text-white">产业规模前景</div>
 
         </div>
 

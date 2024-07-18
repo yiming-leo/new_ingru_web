@@ -40,7 +40,7 @@ const Footer: React.FC<any> = () => {
     ]
     return (
         <div className=" w-full max-w-[1440px] py-10   " style={{ fontFamily: 'alibb-light' }}>
-            <div className=" mt-20 lg:mt-40 h-[1px] " style={{ border: '1px solid #2A2D44' }}> </div>
+            <div className=" mt-20 lg:mt-40  " style={{ border: '1px solid #2A2D44' }}> </div>
 
             <div className=" px-10 lg:px-25  mt-5 lg:mt-13 justify-between flex ">
                 <div className=" lg:flex  lg:gap-12">

@@ -75,9 +75,9 @@ const News: React.FC = () => {
 
     const { isPC, setIsPC } = useStore();
 
-    const cardData: any = [{ imageSrc: safe_png, icon: icon33_png, title: 'DeKnow', description: '新一代内容平台，利用大模型实现文本、图像、语音等实现结构化内容生成' },
-    { imageSrc: agentNet_png, icon: icon11_png, title: 'AgentNet', description: '多智能体系统，系统Agent进行智能编排调控，具备自主决策、感知环境' },
-    { imageSrc: LMCloud_png, icon: icon22_png, title: 'LM Cloud', description: '大模型云平台，支撑AGI计算基础设施能力，助力用户低成本部署AGI模型及应用' }
+    const cardData: any = [{ imageSrc: safe_png, icon: icon33_png, title: 'DeKnow', description: '新一代内容平台，利用大模型实现结构化内容输出' },
+    { imageSrc: agentNet_png, icon: icon11_png, title: 'AgentNet', description: '智能体网络，分布式多智能体即服务，系统Agent智能编排调控' },
+    { imageSrc: LMCloud_png, icon: icon22_png, title: 'LM Cloud', description: '大模型云平台，规模化、标准化、高效能的生成式AGI计算基础设施' }
     ]
 
 
