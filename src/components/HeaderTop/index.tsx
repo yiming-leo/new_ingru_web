@@ -42,8 +42,9 @@ const NavItem: React.FC<NavItemProps> = ({ text, href, isActive, index }) => {
         router.push('/', { scroll: false })
       }
     }
-
   }
+
+
   const items: MenuProps['items'] = [
     {
       key: '1',

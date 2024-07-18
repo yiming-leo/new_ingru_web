@@ -90,7 +90,7 @@ const Home: React.FC = () => {
     console.log(index, 'iiidd')
     return (
       <div className=" flex-1 lg:w-[380px] mt-10 lg:mt-0 cursor-pointer " onClick={() => toNewsContent(index)} >
-        <Image src={imageSrc} className=" h-[200px]  " alt="bg" />
+        <Image src={imageSrc} className=" h-[200px]  " style={{ margin: 'auto' }} alt="bg" />
         {/* <div className=" h-[200px] border" /> */}
         <div className="mt-5">
           <div className="flex items-center gap-[10px]">

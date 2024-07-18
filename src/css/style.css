@@ -370,7 +370,7 @@ height: 40px !important;
     }
 
     .rich-text img {
-        @apply lg:w-1/2 w-full mx-auto;
+        @apply lg:w-75 w-full mx-auto;
     }
 
 
@@ -379,6 +379,18 @@ height: 40px !important;
     }
 
 
+}
+
+.rich-text img {
+    width: 40% !important;
+    height: auto !important;
+}
+
+@media (max-width: 1000px) {
+    .rich-text img {
+        width: 100% !important;
+        height: auto !important;
+    }
 }
 
 /* third-party libraries CSS */

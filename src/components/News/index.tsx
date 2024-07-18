@@ -15,7 +15,6 @@ import { useRouter, usePathname } from 'next/navigation';
 
 const News: React.FC = ({ id }) => {
     const router = useRouter()
-
     const [newsdetail, setNewsDetail] = useState('')
     const [currentNumber, setCurrentNumber] = useState(1);
     const [title, setTitle] = useState({})
