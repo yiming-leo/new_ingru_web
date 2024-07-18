@@ -84,21 +84,52 @@ const News: React.FC = () => {
 
     const newsName = [{ name: '全部' },]
 
+    const [currentType, setCurrentType] = useState('all')
+
+    const typedata = [
+        { name: '全部', key: 'all' },
+        { name: '企业动态', key: 'businessMovement' },
+        { name: '行业动态', key: 'industryMovement' },
+        { name: '技术动态', key: 'technologyMovement' },
+        { name: '合作生态', key: 'cooperationEcology' }
+    ];
+
+    const newsData: any = [{ type: 'businessMovement', imageSrc: news1_png, icon: icon33_png, title: '隐入（浙江）科技有限公司应邀参加“环浙工大创新经济圈“ 创业兴业恳谈会成功签...', description: '隐入（浙江）科技有限公司于7月4日应邀参加了“康”企乐业“乾”图大展“环浙工大创新经济圈”创业兴业恳谈会暨半年度“人工智能+”产业链项目集中签约活动，并在此次活动中成功签约重要合作项目。彰显了公司在推动人工智能应用和行业发展方面的地位及未来发展愿景。' },
+    { type: 'technologyMovement', imageSrc: news2_png, icon: icon11_png, title: '爆火的Sora，对医疗领域会有哪些影响？', description: '北京时间2月16日凌晨，OpenAI宣布了一项重大突破：其全新研发的文生视频大模型Sora正式亮相。继文字、图片之后，全世界再一次被OpenAI震撼了。几乎没有AI制作痕迹的流畅视频，让社交媒体惊呼：现实，是不是不存在了？' },
+    { type: 'industryMovement', imageSrc: news3_png, icon: icon22_png, title: '孙凝晖院士给正国级、副国级讲课的万字长稿发布——《人工智能与智能计算的发展》', description: '中国人大网近日刊登孙凝晖在十四届全国人大常委会专题讲座上的讲稿《人工智能与智能计算的发展》，现将全文转载如下，让我们一同走进高深莫测的人工智能世界。' }
+    ]
+
+    const [newsDatalist, setNewsData] = useState([])
+
+    const changeType = (item) => {
+        setCurrentType(item.key)
+        console.log(item)
+        const newsArr = newsData.filter((itemnews, index) => {
+
+            // console.log(item.type, itemnews.key, '111')
+            return item.key == itemnews.type
+        })
+        console.log(newsArr, 'aaaaaa')
+    }
+
+
+
+    // px-3.5 lg:py-2.5 rounded-lg border border-solid border-slate-800
     const TabMenu = () => {
         return (
             <div style={{ fontFamily: 'alibb-light' }} className=" text-[12px] lg:text-16px flex gap-5 items-center  text-violet-100 text-opacity-70 ">
-                <div className="flex flex-col justify-center self-stretch text-white ">
-                    <div className=" cursor-pointer justify-center px-3.5 lg:py-2.5 rounded-lg border border-solid border-slate-800">
-                        全部
-                    </div>
-                </div>
-                <div className="self-stretch my-auto cursor-pointer z-10">企业动态</div>
+                {typedata.map((item, index) => {
+                    return <div onClick={() => changeType(item)} key={index} className={`${item.key == currentType ? 'rounded-lg border border-solid border-slate-800' : 'border border-transparent'} px-3.5 lg:py-2.5  self-stretch my-auto cursor-pointer z-10`}>{item.name}</div>
+                })}
+                {/* <div className="self-stretch my-auto cursor-pointer z-10 ">企业动态</div>
                 <div className="self-stretch my-auto cursor-pointer z-10" >行业动态</div>
                 <div className="self-stretch my-auto cursor-pointer z-10">技术动态</div>
-                <div className="self-stretch my-auto cursor-pointer z-10">合作生态</div>
+                <div className="self-stretch my-auto cursor-pointer z-10">合作生态</div> */}
             </div>
         );
     };
+
+
 
     const router = useRouter()
     const toNewsContent = (id) => {
@@ -111,8 +142,6 @@ const News: React.FC = () => {
                 <div className="mt-16 w-full ">
                     <div className="lg:flex   gap-8 cursor-pointer z-200  relative " onClick={() => toNewsContent(index)}>
                         <Image src={item.imageSrc} className="w-3/4 h-[120px] mx-auto  lg:w-[320px]  bg-gray-800 rounded-xl lg:h-[168px]" alt="bg" />
-
-                        {/* <div className=" w-3/4 h-[120px] mx-auto  lg:w-[320px]  bg-gray-800 rounded-xl lg:h-[168px]   border" ></div> */}
                         <div className="flex flex-col max-w-[762px] ">
                             <div className="  mt-10 lg:mt-0 flex flex-col self-stretch px-5  text-base font-light text-violet-100 text-opacity-70  ">
                                 <div className="  hover:underline  line-clamp-1 text-sm  lg:text-xl  text-white max-md:max-w-full">
@@ -131,15 +160,11 @@ const News: React.FC = () => {
         )
     }
 
-    const newsData: any = [{ imageSrc: news1_png, icon: icon33_png, title: '隐入（浙江）科技有限公司应邀参加“环浙工大创新经济圈“ 创业兴业恳谈会成功签...', description: '隐入（浙江）科技有限公司于7月4日应邀参加了“康”企乐业“乾”图大展“环浙工大创新经济圈”创业兴业恳谈会暨半年度“人工智能+”产业链项目集中签约活动，并在此次活动中成功签约重要合作项目。彰显了公司在推动人工智能应用和行业发展方面的地位及未来发展愿景。' },
-    { imageSrc: news2_png, icon: icon11_png, title: '爆火的Sora，对医疗领域会有哪些影响？', description: '北京时间2月16日凌晨，OpenAI宣布了一项重大突破：其全新研发的文生视频大模型Sora正式亮相。继文字、图片之后，全世界再一次被OpenAI震撼了。几乎没有AI制作痕迹的流畅视频，让社交媒体惊呼：现实，是不是不存在了？' },
-    { imageSrc: news3_png, icon: icon22_png, title: '孙凝晖院士给正国级、副国级讲课的万字长稿发布——《人工智能与智能计算的发展》', description: '中国人大网近日刊登孙凝晖在十四届全国人大常委会专题讲座上的讲稿《人工智能与智能计算的发展》，现将全文转载如下，让我们一同走进高深莫测的人工智能世界。' }
-    ]
+
 
     return (
         <HeaderLayout>
             <div className=" w-full max-w-[1440px] flex flex-col  items-center  ">
-
                 <div className="flex flex-col  items-center relative">
                     <Image src={bg_png} className=" lg:scale-150  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:rotate-[20deg]    lg:w-[872px]  lg:h-[731px] " alt="bg" />
                     <div className="  mt-20 lg:mt-45 text-titleColor text-xl lg:text-5xl">新闻资讯</div>
@@ -148,7 +173,6 @@ const News: React.FC = () => {
                 <div className=" mt-10 lg:mt-34  w-full" style={{ height: '1px', background: ' linear-gradient(90deg, rgba(42, 45, 68, 0.00) 0%, #2A2D44 50%, rgba(42, 45, 68, 0.00) 100%)' }}></div>
 
                 <div className=" mt-[60px] w-full px-[10px] lg:px-[164px]">
-
                     <div className="flex flex-col">
                         <TabMenu></TabMenu>
                         {newsData.map((item, index) => {

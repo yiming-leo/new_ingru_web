@@ -12,9 +12,8 @@ import newsId3 from "./newscontent3";
 import Footer from "@/components/Footer";
 import { useRouter, usePathname } from 'next/navigation';
 
+
 const News: React.FC = ({ id }) => {
-
-
     const router = useRouter()
 
     const [newsdetail, setNewsDetail] = useState('')
@@ -61,6 +60,7 @@ const News: React.FC = ({ id }) => {
         <HeaderLayout>
             <div className=" ">
                 <div className="w-full max-w-[1440px]  items-center  px-[20px] lg:px-[152px]">
+
                     <div dangerouslySetInnerHTML={{ __html: newsdetail }} className="rich-text  mt-20 " />
                     <div className="shrink-0 mt-11 h-px border border-solid bg-slate-800 border-slate-800 max-md:mt-10 max-md:max-w-full" />
                     <div className="flex gap-5 px-px mt-11 ">
