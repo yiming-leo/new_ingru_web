@@ -10,6 +10,10 @@ body {
 
 }
 
+.tn-transition-end .tn-platform-class .tn-platform-desktop .light-mode {
+    background: red;
+}
+
 /* 分割 */
 
 :where(.css-dev-only-do-not-override-17seli4).ant-menu .ant-menu-item .ant-menu-item-icon svg {

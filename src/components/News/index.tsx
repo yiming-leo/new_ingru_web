@@ -25,14 +25,14 @@ const News: React.FC = ({ id }) => {
             setNewsDetail(newsId1)
             setTitle({ next: '孙凝晖院士给正国级、副国级讲课的万字长稿发布——《人工智能与智能计算的发展》', })
         }
-        if (id == 2) {
-            setNewsDetail(newsId2)
-            setTitle({ next: '爆火的Sora，对医疗领域会有哪些影响？', last: '隐入（浙江）科技有限公司应邀参加“环浙工大创新经济圈“ 创业兴业恳谈会成功签约项目' })
-        }
-        if (id == 3) {
-            setNewsDetail(newsId3)
-            setTitle({ last: '孙凝晖院士给正国级、副国级讲课的万字长稿发布——《人工智能与智能计算的发展》', })
-        }
+        // if (id == 2) {
+        //     setNewsDetail(newsId2)
+        //     setTitle({ next: '爆火的Sora，对医疗领域会有哪些影响？', last: '隐入（浙江）科技有限公司应邀参加“环浙工大创新经济圈“ 创业兴业恳谈会成功签约项目' })
+        // }
+        // if (id == 3) {
+        //     setNewsDetail(newsId3)
+        //     setTitle({ last: '孙凝晖院士给正国级、副国级讲课的万字长稿发布——《人工智能与智能计算的发展》', })
+        // }
 
     }, [])
 
@@ -57,10 +57,15 @@ const News: React.FC = ({ id }) => {
 
 
     return (
+        // <div className="w-full max-w-[1440px]  items-center  px-[20px] lg:px-[152px]">
+        //     <div dangerouslySetInnerHTML={{ __html: newsdetail }} className="rich-text  mt-20 " />
+
+        // </div>
+
         <HeaderLayout>
             <div className=" ">
                 <div className="w-full max-w-[1440px]  items-center  px-[20px] lg:px-[152px]">
-
+                    {/* <iframe src="https://a.xiumi.us/board/v5/4bkfR/552832590" className="mt-20" style={{ width: '100%', height: '2400px' }} ></iframe> */}
                     <div dangerouslySetInnerHTML={{ __html: newsdetail }} className="rich-text  mt-20 " />
                     <div className="shrink-0 mt-11 h-px border border-solid bg-slate-800 border-slate-800 max-md:mt-10 max-md:max-w-full" />
                     <div className="flex gap-5 px-px mt-11 ">
