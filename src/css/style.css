@@ -370,26 +370,30 @@ height: 40px !important;
     }
 
     .rich-text img {
-        @apply lg:w-75 w-full mx-auto;
+        @apply lg:w-75 w-full mx-auto my-10 lg:my-2;
     }
 
 
     .rich-text p {
-        @apply text-justify break-all w-full block py-5 lg:py-2;
+        @apply text-justify break-all w-full block lg:py-2 py-3;
     }
+
+
 
 
 }
 
 .rich-text img {
     width: 40% !important;
-    height: auto !important;
+    /* height: !important; */
+    min-height: 320px;
 }
 
 @media (max-width: 1000px) {
     .rich-text img {
         width: 100% !important;
         height: auto !important;
+
     }
 }
 

@@ -22,15 +22,15 @@ const News: React.FC = ({ id }) => {
     useEffect(() => {
         if (id == 1) {
             setNewsDetail(newsId1)
-            setTitle({ next: '孙凝晖院士给正国级、副国级讲课的万字长稿发布——《人工智能与智能计算的发展》', })
+            setTitle({ next: '爆火的Sora，对医疗领域会有哪些影响？', })
         }
         if (id == 2) {
             setNewsDetail(newsId2)
-            setTitle({ next: '爆火的Sora，对医疗领域会有哪些影响？', last: '隐入（浙江）科技有限公司应邀参加“环浙工大创新经济圈“ 创业兴业恳谈会成功签约项目' })
+            setTitle({ next: '孙凝晖院士给正国级、副国级讲课的万字长稿发布——《人工智能与智能计算的发展》', last: '隐入（浙江）科技有限公司应邀参加“环浙工大创新经济圈“ 创业兴业恳谈会成功签约项目' })
         }
         if (id == 3) {
             setNewsDetail(newsId3)
-            setTitle({ last: '孙凝晖院士给正国级、副国级讲课的万字长稿发布——《人工智能与智能计算的发展》', })
+            setTitle({ last: '爆火的Sora，对医疗领域会有哪些影响？', })
         }
 
     }, [])

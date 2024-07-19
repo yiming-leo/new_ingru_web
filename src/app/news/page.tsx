@@ -83,9 +83,9 @@ const News: React.FC = () => {
         { name: '合作生态', key: 'cooperationEcology' }
     ];
 
-    const newsData: any = [{ type: 'businessMovement', id: 1, imageSrc: news1_png, icon: icon33_png, title: '隐入（浙江）科技有限公司应邀参加“环浙工大创新经济圈“ 创业兴业恳谈会成功签...', description: '隐入（浙江）科技有限公司于7月4日应邀参加了“康”企乐业“乾”图大展“环浙工大创新经济圈”创业兴业恳谈会暨半年度“人工智能+”产业链项目集中签约活动，并在此次活动中成功签约重要合作项目。彰显了公司在推动人工智能应用和行业发展方面的地位及未来发展愿景。' },
-    { type: 'technologyMovement', id: 2, imageSrc: news2_png, icon: icon11_png, title: '爆火的Sora，对医疗领域会有哪些影响？', description: '北京时间2月16日凌晨，OpenAI宣布了一项重大突破：其全新研发的文生视频大模型Sora正式亮相。继文字、图片之后，全世界再一次被OpenAI震撼了。几乎没有AI制作痕迹的流畅视频，让社交媒体惊呼：现实，是不是不存在了？' },
-    { type: 'industryMovement', id: 3, imageSrc: news3_png, icon: icon22_png, title: '孙凝晖院士给正国级、副国级讲课的万字长稿发布——《人工智能与智能计算的发展》', description: '中国人大网近日刊登孙凝晖在十四届全国人大常委会专题讲座上的讲稿《人工智能与智能计算的发展》，现将全文转载如下，让我们一同走进高深莫测的人工智能世界。' }
+    const newsData: any = [{ time: '2024-07-09 10:00:00', type: 'businessMovement', id: 1, imageSrc: news1_png, icon: icon33_png, title: '隐入（浙江）科技有限公司应邀参加“环浙工大创新经济圈“ 创业兴业恳谈会成功签...', description: '隐入（浙江）科技有限公司于7月4日应邀参加了“康”企乐业“乾”图大展“环浙工大创新经济圈”创业兴业恳谈会暨半年度“人工智能+”产业链项目集中签约活动，并在此次活动中成功签约重要合作项目。彰显了公司在推动人工智能应用和行业发展方面的地位及未来发展愿景。' },
+    { time: '2024-02-26 16:29:00', type: 'technologyMovement', id: 2, imageSrc: news2_png, icon: icon11_png, title: '爆火的Sora，对医疗领域会有哪些影响？', description: '北京时间2月16日凌晨，OpenAI宣布了一项重大突破：其全新研发的文生视频大模型Sora正式亮相。继文字、图片之后，全世界再一次被OpenAI震撼了。几乎没有AI制作痕迹的流畅视频，让社交媒体惊呼：现实，是不是不存在了？' },
+    { time: '2024-05-23 13:56:00', type: 'industryMovement', id: 3, imageSrc: news3_png, icon: icon22_png, title: '孙凝晖院士给正国级、副国级讲课的万字长稿发布——《人工智能与智能计算的发展》', description: '中国人大网近日刊登孙凝晖在十四届全国人大常委会专题讲座上的讲稿《人工智能与智能计算的发展》，现将全文转载如下，让我们一同走进高深莫测的人工智能世界。' }
     ]
 
     const [newsDatalist, setNewsData] = useState(newsData)
@@ -138,21 +138,21 @@ const News: React.FC = () => {
             <>
                 <div className="mt-16 w-full ">
                     <div className="lg:flex   gap-8 cursor-pointer z-200  relative " onClick={() => toNewsContent(item)}>
-                        <Image src={item.imageSrc} className="w-3/4 h-[120px] mx-auto  lg:w-[320px]  bg-gray-800 rounded-xl lg:h-[168px]" alt="bg" />
+                        <Image src={item.imageSrc} className="w-3/4 h-[150px] mx-auto  lg:w-[320px]  bg-gray-800 rounded-xl lg:h-[168px]" alt="bg" />
                         <div className="flex flex-col max-w-[762px] ">
                             <div className="  mt-10 lg:mt-0 flex flex-col self-stretch px-5  text-base font-light text-violet-100 text-opacity-70  ">
                                 <div className="  hover:underline  line-clamp-1 text-sm  lg:text-xl  text-white max-md:max-w-full">
                                     {item.title}
                                 </div>
-                                <div className="mt-2  max-md:max-w-full lg:text-16px text-[12px]" style={{ fontFamily: 'alibb-light' }}>
+                                <div className="mt-2  max-md:max-w-full lg:text-16px text-[12px] min-h-[50px]" style={{ fontFamily: 'alibb-light' }}>
                                     {item.description}
                                 </div>
-                                <div className=" mt-2 lg:mt-5 max-md:max-w-full text-12px lg:text-[16px]" style={{ fontFamily: 'alibb-light' }}>2023-01-08 10:00:00</div>
+                                <div className=" mt-2 lg:mt-12 max-md:max-w-full text-12px lg:text-[16px]" style={{ fontFamily: 'alibb-light' }}>{item.time}</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                {index !== 3 && <div className=" mt-5 lg:mt-10 w-full border border-solid bg-slate-800 border-slate-800 min-h-[1px] max-md:max-w-full" />}
+                {index !== 3 && <div className=" mt-5 lg:mt-10 w-full  border-t border-solid bg-slate-800 border-slate-800 min-h-[1px] max-md:max-w-full" />}
             </>
         )
     }

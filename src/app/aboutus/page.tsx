@@ -96,8 +96,9 @@ const Aboutus: React.FC = () => {
     const MemberContent = ({ name, des, img }) => {
         return (
             <div className=" flex items-center gap-5 mt-15 lg:mt-0">
-                <Image src={img} className="w-[100px] h-[100px]   rounded-[50%]  " alt="bg" />
-                <div className="w-73 flex flex-col justify-center  h-25 gap-2 ">
+
+                <Image src={img} className="w-[100px] h-[100px]   rounded-[50%]  " alt=" " />
+                <div className="w-73 flex flex-col justify-center  h-25 gap-2 lg:w-[280px] ">
                     <div className=" text-white">
                         {name}
                     </div>
@@ -221,6 +222,7 @@ const Aboutus: React.FC = () => {
                     <div className=" lg:mt-18  lg:flex gap-5  justify-start w-full">
                         <MemberContent name={'邹茜羽 Blockchain Engineer'} des={''} img={xiaoyu_png}></MemberContent>
                         <MemberContent name={'廖一鸣 AI Engineer'} des={''} img={xiaoliao_png}></MemberContent>
+
 
                     </div>
 

@@ -113,7 +113,7 @@ const Home: React.FC = () => {
             <div className=" w-full max-w-[1920px] flex flex-col  items-center  ">
 
                 <div className="flex flex-col  items-center relative">
-                    <Image src={bg_png} className=" lg:scale-150  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:rotate-[20deg]    lg:w-[872px]  lg:h-[731px] " alt="bg" />
+                    <Image src={bg_png} className="  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:rotate-[20deg]    lg:w-[872px]  lg:h-[831px] " alt="bg" />
 
                     <div className=" mt-10 lg:mt-25  w-39  h-9  rounded-3xl  flex  items-center px-5 " style={{ background: 'linear-gradient(90deg, rgba(222, 151, 247, 0.24) 0%, rgba(178, 148, 245, 0.24) 50%, rgba(155, 177, 253, 0.24) 100%)' }}>
                         <Image src={star_png} className=" w-8  h-6" alt="bg" />

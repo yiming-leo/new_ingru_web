@@ -223,7 +223,7 @@ const Home: React.FC = () => {
               </div>
 
               <div className=" relative flex justify-center">
-                <Image src={star2_png} className="  w-[300px]  lg:w-[1200px]  lg:h-[300px]     " alt="bg" />
+                <Image src={star2_png} className="  w-[300px]  lg:w-[1200px]  lg:h-[300px]   z-999   " alt="bg" />
                 <div className="desc text-sm lg:h-20  lg:w-[420px] w-[250px]  absolute lg:left-1/2   lg:top-1/4  ">“振金”算力交易平台为客户提供的价值在于其高效、低成本的算力服务，以及易于接入和使用的AI技术体验。用户可以轻松地在我们的平台上找到所需的算力资源，无需大量前期投资即可快速部署和扩展其计算需求。</div>
 
               </div>
