@@ -136,10 +136,10 @@ const Home: React.FC = () => {
 
         <div className=" mt-10 w-full text-center ">
           <div className="text-2xl lg:text-3xl text-title">
-            多模态产品平台
+            以算力市场平台作为产品组合基座
           </div>
           <div className="text-2xl lg:text-3xl text-title">
-            一键生成一键部署
+            汇集算力组合创新性产品
           </div>
         </div>
 
