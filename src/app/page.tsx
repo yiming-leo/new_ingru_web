@@ -138,7 +138,7 @@ const Home: React.FC = () => {
           <div className="text-2xl lg:text-3xl text-title">
             以算力市场平台作为产品组合基座
           </div>
-          <div className="text-2xl lg:text-3xl text-title">
+          <div className="text-2xl lg:text-3xl text-title mt-1">
             汇集算力组合创新性产品
           </div>
         </div>
