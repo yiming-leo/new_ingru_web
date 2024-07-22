@@ -190,7 +190,7 @@ const Aboutus: React.FC = () => {
                             我们的团队由具有丰富技术背景和创业经验的成员组成，涵盖云计算、人工智能、大数据、企业架构及风险管理等领域。核心团队长期致力于高效、低成本算力平台的研究与开发，已成功构建了一个能够整合分布式算力资源的高效网络，致力于解决传统算力中心化带来的高成本和资源浪费问题。
                         </div>
                     </div>
-                    <div className=" mt-[30px] lg:mt-[60px] h-[1px]  w-full " style={{ border: '1px solid #2A2D44' }}> </div>
+                    <div className=" mt-[30px] lg:mt-[60px] h-[1px]  w-full " style={{ borderTop: '1px solid #2A2D44' }}> </div>
 
 
 

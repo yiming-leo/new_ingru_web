@@ -194,7 +194,7 @@ const Home: React.FC = () => {
 
         {/* 圆圈内容区域 */}
         <div className="  mt-[154px]  ">
-          <div className="  w-screen max-w-[1440px] max-h-[1440px]  lg:h-[100vw] h-[100vw] relative  " style={{ borderRadius: '50%', background: 'linear-gradient(180deg, #000212 36.97%, #222555 200%)', boxShadow: '0px 4px 200px 0px rgba(120, 119, 198, 0.40)' }}>
+          <div className="  w-screen max-w-[1440px] max-h-[1440px]  lg:w-[99vw] h-[99vw] relative  " style={{ borderRadius: '50%', background: 'linear-gradient(180deg, #000212 36.97%, #222555 200%)', boxShadow: '0px 4px 200px 0px rgba(120, 119, 198, 0.40)' }}>
             <Image src={bg2_png} className=" w-[180px] h-[180px]  lg:w-[389px] lg:h-[433px] absolute  -top-30 left-1/2 transform -translate-x-1/2 rotate-180 " alt="bg" />
             <div className="  pt-10  sm:pt-60  lg:pt-80 w-full  ">
               <div className=" px-15 lg:px-[320px] w-full">

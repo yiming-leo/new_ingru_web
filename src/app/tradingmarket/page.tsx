@@ -120,10 +120,10 @@ const Home: React.FC = () => {
                         <div className=" text-sm  text-test" >算力交易市场</div>
                     </div>
                     <div className=" mt-6 text-titleColor text-xl lg:text-5xl">人人提供算力，人人使用算力</div>
-                    <div className=" mt-6 text-titleColor px-15 lg:px-0    text-center  lg:text-start lg:w-[480px] lg:leading-6 text-[12px]  lg:text-16px" style={{ color: '#B4BCD0', fontFamily: 'alibb-light' }}  >算力交易新生态，优化资源配置，激发闲置算力，共创算力市场繁荣 打造算力统一大市场</div>
+                    <div className=" mt-6 text-titleColor px-15 lg:px-0   text-left  lg:text-start lg:w-[630px] lg:leading-6 text-[12px]  lg:text-16px" style={{ color: '#B4BCD0', fontFamily: 'alibb-light' }}  >算力交易新生态，优化资源配置，激发闲置算力，共创算力市场繁荣 打造算力统一大市场</div>
 
 
-                    <div className=" mt-8  w-full px-16 flex justify-center lg:justify-start  ">
+                    <div className=" mt-8  w-full  flex justify-center lg:justify-start  ">
 
                         <div className=" relative  cursor-pointer z-10 flex  items-center justify-center lg:w-[137px] lg:h-[45px]  w-[120px] h-[35px]" style={{ borderRadius: '24px', background: 'linear-gradient(90deg, #455EB5 0%, #5643CC 50%, #673FD7 100%)' }}>
                             <Image src={star_png} className=" w-8  h-6" alt="bg" />
@@ -210,7 +210,7 @@ const Home: React.FC = () => {
                     </div>}
                 </div>
 
-                <div className="  mt-10 lg:mt-20  w-full" style={{ height: '1px', background: ' linear-gradient(90deg, rgba(42, 45, 68, 0.00) 0%, #2A2D44 50%, rgba(42, 45, 68, 0.00) 100%)' }}></div>
+                <div className=" mt-10 lg:mt-20  w-full lg:w-[700px] " style={{ height: '1px', background: ' linear-gradient(90deg, rgba(42, 45, 68, 0.00) 0%, #2A2D44 50%, rgba(42, 45, 68, 0.00) 100%)' }}></div>
 
 
 

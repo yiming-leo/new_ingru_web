@@ -115,7 +115,7 @@ const News: React.FC = () => {
         return (
             <div style={{ fontFamily: 'alibb-light' }} className=" text-[12px] lg:text-16px flex  gap-3 lg:gap-5 items-center  text-violet-100 text-opacity-70 ">
                 {typedata.map((item, index) => {
-                    return <div onClick={() => changeType(item)} key={index} className={`${item.key == currentType ? 'rounded-lg border border-solid border-slate-800' : 'border border-transparent'} px-2  lg:px-3.5 lg:py-2.5  self-stretch my-auto cursor-pointer z-10`}>{item.name}</div>
+                    return <div onClick={() => changeType(item)} key={index} className={`${item.key == currentType ? 'rounded-lg border border-solid border-[#2A2D44]' : 'border border-transparent'} px-2  lg:px-2 lg:py-1  self-stretch my-auto cursor-pointer z-10`}>{item.name}</div>
                 })}
                 {/* <div className="self-stretch my-auto cursor-pointer z-10 ">企业动态</div>
                 <div className="self-stretch my-auto cursor-pointer z-10" >行业动态</div>
@@ -133,7 +133,7 @@ const News: React.FC = () => {
         router.push(`/news/newsdetail/${item.id}/`)
     }
 
-    const NewsContent = ({ index, item }) => {
+    const NewsContent = ({ index, item, length }) => {
         return (
             <>
                 <div className="mt-16 w-full ">
@@ -152,7 +152,7 @@ const News: React.FC = () => {
                         </div>
                     </div>
                 </div>
-                {index !== 3 && <div className=" mt-5 lg:mt-10 w-full  border-t border-solid bg-slate-800 border-slate-800 min-h-[1px] max-md:max-w-full" />}
+                {index !== length - 1 && <div className=" mt-5 lg:mt-10 w-full border-solid   border-[#2A2D44]  max-md:max-w-full" style={{ borderTop: 'solid 1px #2A2D44 ' }} />}
             </>
         )
     }
@@ -173,7 +173,7 @@ const News: React.FC = () => {
                         <TabMenu></TabMenu>
                         {newsDatalist.map((item, index) => {
                             return (
-                                <NewsContent item={item} key={index} index={index} />
+                                <NewsContent length={newsDatalist.length} item={item} key={index} index={index} />
                             )
                         })}
 
