@@ -1,6 +1,6 @@
 "use client"
 import * as React from "react";
-import { Button, Divider, Modal, Popover, Space, message, } from 'antd';
+import { Button, Divider, Dropdown, Modal, Popover, Space, message, } from 'antd';
 import { useEffect, useState } from "react";
 import { useRouter, usePathname } from 'next/navigation';
 import tips from '@/assets/svg/tips.svg';
@@ -9,7 +9,9 @@ import ButtonLink from "@/components/ButtonLink";
 import axiosReq from '@/utils/req'
 import vx_svg from '@/assets/svg/vx.svg';
 import zh_svg from '@/assets/svg/zh.svg';
+import yinru_png from '@/assets/img/yinru.png';
 import { useStore } from "@/store/useStore";
+import type { MenuProps } from 'antd';
 
 import logo_png from '@/assets/img/logo.png';
 
@@ -18,6 +20,11 @@ import logo_png from '@/assets/img/logo.png';
 
 
 const Footer: React.FC<any> = () => {
+
+    const content = (
+        <Image src={yinru_png} className="w-[120px] h-[120px]  " alt="bg" />
+    );
+
 
     const BottomText = ({ text }) => {
         return <div className=" hover:text-white   text-[12px] lg:text-sm   cursor-pointer">
@@ -60,8 +67,11 @@ const Footer: React.FC<any> = () => {
                     </div>
                 </div>
                 <div className=" flex gap-5">
-                    <Image src={vx_svg} className="    w-[20px] h-[20px]     " alt="bg" />
-                    <Image src={zh_svg} className="   w-[20px] h-[20px]     " alt="bg" />
+                    <Popover content={content} trigger="hover">
+                        <Image src={vx_svg} className=" transform  hover:scale-125  cursor-pointer   w-[20px] h-[20px]     " alt="bg" />
+                    </Popover>
+
+                    <Image src={zh_svg} className="  cursor-pointer  w-[20px] h-[20px]     " alt="bg" />
                 </div>
             </div>
             <div className="lg:px-25 lg:mt-5 mt-1 px-10">

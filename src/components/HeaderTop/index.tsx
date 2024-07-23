@@ -54,16 +54,6 @@ const NavItem: React.FC<NavItemProps> = ({ text, href, isActive, index }) => {
         </Link>
       ),
     },
-    // {
-    //   key: '2',
-    //   label: (
-    //     <Link className="text-title-2sm text-fontColor  flex justify-center items-center" style={{ color: '#565656' }} href="/computinguse">
-    //       <div className="text-title-2sm text-fontColor">使用算力</div>
-    //     </Link>
-    //   ),
-    // },
-
-
   ];
 
 
