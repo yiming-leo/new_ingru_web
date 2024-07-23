@@ -9,6 +9,7 @@ import Head from "next/head";
 import type { Metadata } from 'next'
 import dynamic from "next/dynamic";
 import Adaptation from "@/components/common/Adaptation";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: '隐入科技',

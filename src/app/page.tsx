@@ -130,7 +130,7 @@ const Home: React.FC = () => {
         </div>
         <div className=" px-4  mt-25  w-40 h-9 rounded-2xl  flex items-center gap-1  " style={{ border: '1px solid #7877C6' }}>
           <Image src={arrows_png} className=" w-5  h-5" alt="bg" />
-          <div className=" text-[16px] text-white">SL产品生态链</div>
+          <div className=" text-[16px] text-white">产品战略</div>
 
         </div>
 
@@ -151,9 +151,10 @@ const Home: React.FC = () => {
 
             <Image src={shandian_png} className=" w-4 h-4" alt="bg" />
             <div className=" text-white text-xl">算力交易平台</div>
+
           </div>
           <div className=" w-70 text-16px  font-thin " style={{ color: 'rgba(239, 237, 253, 0.70)', fontFamily: 'alibb-light' }}>
-            共享闲置算力，赚取算力点，加入分布式算力网络，共建高效
+            算力交易新生态，优化资源配置，激发闲置算力，打造算力统一大市场
           </div>
         </div>
         {isPC && <div className=" mt-25" >
@@ -245,11 +246,10 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
+
         {!isPC && <div className=" px-8  mt-20  ">
           <div className=" text-center text-3xl  newsTitle">新闻中心</div>
-
           <div className="  mt-10  gap-13 justify-center">
-
             {newsData.map((item, index) => {
               return <NewsCard index={index} key={index} imageSrc={item.imageSrc} icon={item.icon} title={item.title} description={item.description}></NewsCard>
             })}

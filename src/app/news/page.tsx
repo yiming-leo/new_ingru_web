@@ -113,7 +113,7 @@ const News: React.FC = () => {
     // px-3.5 lg:py-2.5 rounded-lg border border-solid border-slate-800
     const TabMenu = () => {
         return (
-            <div style={{ fontFamily: 'alibb-light' }} className=" text-[12px] lg:text-16px flex  gap-3 lg:gap-5 items-center  text-violet-100 text-opacity-70 ">
+            <div style={{ fontFamily: 'alibb-light' }} className=" text-[12px] lg:text-16px flex  gap-2 lg:gap-5 items-center  text-violet-100 text-opacity-70 ">
                 {typedata.map((item, index) => {
                     return <div onClick={() => changeType(item)} key={index} className={`${item.key == currentType ? 'rounded-lg border border-solid border-[#2A2D44]' : 'border border-transparent'} px-2  lg:px-2 lg:py-1  self-stretch my-auto cursor-pointer z-10`}>{item.name}</div>
                 })}
