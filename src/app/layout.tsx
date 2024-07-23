@@ -13,7 +13,7 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: '隐入科技',
-  // description: '掘金算力平台',
+
 }
 
 
@@ -23,30 +23,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-
-  // const Adaptation = dynamic(() => import('@/components/common/Adaptation'));
   return (
     <html lang="CN">
-
-      <Head>
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-GR8X3LDNG9"></Script>
-        <Script
+      <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GR8X3LDNG9"></script>
+        <script
           dangerouslySetInnerHTML={{
             __html: `
          window.dataLayer = window.dataLayer || [];
-         function gtag(){dataLayer.push(arguments);}
+         function gtag(){dataLayer.push(arguments);};
          gtag('js', new Date());
          gtag('config', 'G-GR8X3LDNG9');`
           }}
         >
-        </Script>
-      </Head>
+        </script>
+      </head>
       <body suppressHydrationWarning={true}>
-        {/* <Suspense fallback={<Loader />}>
-          <Adaptation >
-            {children}
-          </Adaptation>
-        </Suspense> */}
         <Adaptation >
           {children}
         </Adaptation>
