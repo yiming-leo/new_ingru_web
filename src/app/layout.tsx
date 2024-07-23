@@ -10,6 +10,8 @@ import type { Metadata } from 'next'
 import dynamic from "next/dynamic";
 import Adaptation from "@/components/common/Adaptation";
 import Script from "next/script";
+import { ConfigProvider } from "antd";
+import zhCN from 'antd/es/locale/zh_CN';
 
 export const metadata: Metadata = {
   title: '隐入科技',
@@ -22,6 +24,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const local = zhCN
 
   return (
     <html lang="CN">
@@ -39,10 +43,12 @@ export default function RootLayout({
         </script>
       </head>
       <body suppressHydrationWarning={true}>
-        <Adaptation >
-          {children}
-        </Adaptation>
+        <ConfigProvider locale={local} >
 
+          <Adaptation >
+            {children}
+          </Adaptation>
+        </ConfigProvider>
       </body>
     </html>
   );

@@ -90,7 +90,7 @@ const Home: React.FC = () => {
     console.log(index, 'iiidd')
     return (
       <div className=" flex-1 lg:w-[380px] mt-10 lg:mt-0 cursor-pointer " onClick={() => toNewsContent(index)} >
-        <Image src={imageSrc} className=" h-[200px]  " style={{ margin: 'auto' }} alt="bg" />
+        <Image src={imageSrc} className=" h-[200px]  transform hover:scale-[1.03]  " style={{ margin: 'auto' }} alt="bg" />
         {/* <div className=" h-[200px] border" /> */}
         <div className="mt-5">
           <div className="flex items-center gap-[10px]">
@@ -159,7 +159,7 @@ const Home: React.FC = () => {
         </div>
         {isPC && <div className=" mt-25" >
           <div className=" h-[1px] w-50 transform  rotate-90 relative" style={{ background: '   linear-gradient(90deg, rgba(61, 65, 97, 0.00) 0%, rgba(61, 65, 97, 0.45) 20%, #3D4161 50%, rgba(61, 65, 97, 0.41) 79.5%, rgba(61, 65, 97, 0.00) 100%)' }}>
-            <div className="  absolute top-1/2 left-1/2 transform  rotate-90 -translate-x-1/2 -translate-y-1/2  w-[844px] h-[1px] " style={{ background: '#3D4161' }}>
+            <div className="  absolute top-1/2 left-1/2 transform  rotate-90 -translate-x-1/2 -translate-y-1/2  w-[844px] h-[1px] " style={{ background: 'linear-gradient(90deg, rgba(61, 65, 97, 0.00) 0%, rgba(61, 65, 97, 0.45) 20%, #3D4161 50%, rgba(61, 65, 97, 0.41) 79.5%, rgba(61, 65, 97, 0.00) 100%)' }}>
               <div className=" absolute -right-[50px]  -top-[50px] w-25 h-[1px] transform  rotate-90 z-20" style={{ background: '   linear-gradient(90deg, rgba(61, 65, 97, 0.00) 0%, rgba(61, 65, 97, 0.45) 20%, #3D4161 50%, rgba(61, 65, 97, 0.41) 79.5%, rgba(61, 65, 97, 0.00) 100%)' }}></div>
               <div className=" absolute -left-[50px]  -top-[50px] w-25 h-[1px] transform  rotate-90 z-20" style={{ background: '   linear-gradient(90deg, rgba(61, 65, 97, 0.00) 0%, rgba(61, 65, 97, 0.45) 20%, #3D4161 50%, rgba(61, 65, 97, 0.41) 79.5%, rgba(61, 65, 97, 0.00) 100%)' }}></div>
             </div>

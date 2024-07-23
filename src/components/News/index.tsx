@@ -52,15 +52,7 @@ const News: React.FC = ({ id }) => {
             router.push(`/news/newsdetail/${nextNumber}/`)
         }
     }
-
-
-
     return (
-        // <div className="w-full max-w-[1440px]  items-center  px-[20px] lg:px-[152px]">
-        //     <div dangerouslySetInnerHTML={{ __html: newsdetail }} className="rich-text  mt-20 " />
-
-        // </div>
-
         <HeaderLayout>
             <div className=" ">
                 <div className="w-full max-w-[1440px]  items-center  px-[20px] lg:px-[152px]">

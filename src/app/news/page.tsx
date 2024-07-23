@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useMemo, useState } from "react";
-import { Descriptions, message } from 'antd';
+import { Descriptions, Pagination, message } from 'antd';
 import axiosReq from '@/utils/req'
 import { useStore } from "@/store/useStore";
 
@@ -97,14 +97,23 @@ const News: React.FC = () => {
         console.log(item)
         if (item.key == 'all') {
             setNewsData(newsData)
+            setTotal(newsData.length)
         } else {
             const newsArr = newsData.filter((itemnews, index) => {
                 return item.key == itemnews.type
             })
             setNewsData(newsArr)
+            setTotal(newsArr.length)
         }
 
 
+
+
+
+    }
+
+    const pageChange = (page = 1, pageSize = 10) => {
+        setPageSize(pageSize)
 
     }
 
@@ -124,6 +133,9 @@ const News: React.FC = () => {
             </div>
         );
     };
+    const [totalNum, setTotal] = useState(newsData.length)
+    const [currenPage, setCurrentPage] = useState(1)
+    const [pageSize, setPageSize] = useState(5)
 
 
 
@@ -177,6 +189,19 @@ const News: React.FC = () => {
                             )
                         })}
 
+                    </div>
+                    <div className="flex w-full justify-end  transform  scale-90 mt-5  ">
+                        <Pagination
+                            className=" mt-4   py-5 lg:relative lg:left-15 "
+                            total={totalNum}
+                            showTotal={(total) => `共 ${total}条`}
+                            defaultPageSize={pageSize}
+                            pageSize={pageSize}
+                            defaultCurrent={currenPage}
+                            onChange={(page, pageSize) => pageChange(page, pageSize)}
+                            showSizeChanger={true}
+                            pageSizeOptions={[5, 10, 20, 30, 40]}
+                        />
                     </div>
                 </div>
 
