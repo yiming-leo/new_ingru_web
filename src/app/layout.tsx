@@ -27,6 +27,20 @@ export default function RootLayout({
   // const Adaptation = dynamic(() => import('@/components/common/Adaptation'));
   return (
     <html lang="CN">
+
+      <Head>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-GR8X3LDNG9"></Script>
+        <Script
+          dangerouslySetInnerHTML={{
+            __html: `
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'G-GR8X3LDNG9');`
+          }}
+        >
+        </Script>
+      </Head>
       <body suppressHydrationWarning={true}>
         {/* <Suspense fallback={<Loader />}>
           <Adaptation >
