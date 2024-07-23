@@ -26,8 +26,8 @@ const Footer: React.FC<any> = () => {
     );
 
 
-    const BottomText = ({ text }) => {
-        return <div className=" hover:text-white   text-[12px] lg:text-sm   cursor-pointer">
+    const BottomText = ({ text, index }) => {
+        return <div className={` hover:text-white  ${index == 0 && 'text-white'}  text-[12px] lg:text-sm   cursor-pointer`}>
             {text}
         </div>
     }
@@ -61,7 +61,7 @@ const Footer: React.FC<any> = () => {
                     <div className="flex  lg:gap-13  flex-wrap  gap-1 mt-3 lg:mt-0 ">
                         {textData.map((item, index) => {
                             return (
-                                <BottomText key={index} text={item.name}></BottomText>
+                                <BottomText key={index} index={index} text={item.name}></BottomText>
                             )
                         })}
                     </div>
