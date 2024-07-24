@@ -10,10 +10,8 @@ import axiosReq from '@/utils/req'
 import vx_svg from '@/assets/svg/vx.svg';
 import zh_svg from '@/assets/svg/zh.svg';
 import yinru_png from '@/assets/img/yinru.png';
-import { useStore } from "@/store/useStore";
-import type { MenuProps } from 'antd';
-
 import logo_png from '@/assets/img/logo.png';
+import WxIcon from "../Icon/wx";
 
 
 
@@ -68,7 +66,9 @@ const Footer: React.FC<any> = () => {
                 </div>
                 <div className=" flex gap-5">
                     <Popover content={content} trigger="hover">
-                        <Image src={vx_svg} className=" transform  hover:scale-125  cursor-pointer   w-[20px] h-[20px]     " alt="bg" />
+                        <Image src={vx_svg} className="    transition-all transform  hover:scale-125  cursor-pointer   w-[20px] h-[20px]     " alt="bg" />
+
+                        {/* <WxIcon ></WxIcon> */}
                     </Popover>
 
                     <Image src={zh_svg} className="  cursor-pointer  w-[20px] h-[20px]     " alt="bg" />
@@ -87,9 +87,7 @@ const Footer: React.FC<any> = () => {
             </div>
             <div className=" px-10 lg:mt-5  mt-1 ">
                 <div className="flex gap-13 lg:px-15 ">
-                    <div className=" lg:text-sm text-[12px] text-start  " style={{ color: '#8A8F9', wordBreak: 'break-all' }}>Copyright©2024隐入（杭州）科技有限公司版权所有  |  浙ICP备2024065338号 | 浙公网安备33010802013495号</div>
-
-
+                    <a className=" lg:text-sm text-[12px] text-start   " style={{ color: '#8A8F9', wordBreak: 'break-all' }}>Copyright©2024隐入（杭州）科技有限公司版权所有<a href="https://beian.miit.gov.cn" className=" cursor-pointer hover:underline">|  浙ICP备2024065338号</a>  | 浙公网安备33010802013495号</a>
                 </div>
             </div>
         </div>

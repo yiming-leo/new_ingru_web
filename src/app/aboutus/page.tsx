@@ -68,19 +68,6 @@ const Aboutus: React.FC = () => {
         </div>
     }
 
-    const textData = [{
-        name: '产品',
-    },
-    {
-        name: '算力交易市场',
-    }, {
-        name: '新一代内容平台',
-    }, {
-        name: '超级Agent',
-    }, {
-        name: '大模型云平台',
-    }
-    ]
 
 
     const { isPC, setIsPC } = useStore();
@@ -124,7 +111,7 @@ const Aboutus: React.FC = () => {
                             <Image src={star_png} className=" w-8  h-6" alt="bg" />
                             <div className=" text-sm  text-test" >构建算力生态，引领算力市场</div>
                         </div>
-                        <div className=" mt-6 text-titleColor text-xl lg:text-5xl">以价值创造价值，以梦想成就梦想</div>
+                        <div className=" mt-6 text-titleColor text-xl lg:text-5xl" style={{ fontFamily: 'alibb-regular' }}>以价值创造价值，以梦想成就梦想</div>
                         <div className=" mt-6 text-titleColor   text-[12px]  lg:text-16px" style={{ color: '#B4BCD0', fontFamily: 'alibb-light' }}  >AGI问题发现者，算力市场创新者，迎接绿色，人本的 AI 时代</div>
 
                         <div className=" mt-15 ">

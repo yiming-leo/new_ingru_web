@@ -58,19 +58,7 @@ const Home: React.FC = () => {
     </div>
   }
 
-  const textData = [{
-    name: '产品',
-  },
-  {
-    name: '算力交易市场',
-  }, {
-    name: '新一代内容平台',
-  }, {
-    name: '超级Agent',
-  }, {
-    name: '大模型云平台',
-  }
-  ]
+
 
 
   const { isPC, setIsPC } = useStore();
@@ -90,7 +78,9 @@ const Home: React.FC = () => {
     console.log(index, 'iiidd')
     return (
       <div className=" flex-1 lg:w-[380px] mt-10 lg:mt-0 cursor-pointer " onClick={() => toNewsContent(index)} >
-        <Image src={imageSrc} className=" h-[200px]  transform hover:scale-[1.03]  " style={{ margin: 'auto' }} alt="bg" />
+        <div className=" overflow-hidden  rounded-lg ">
+          <Image src={imageSrc} className=" h-[200px]  transform  hover:scale-[1.05] transition-all " style={{ margin: 'auto' }} alt="bg" />
+        </div>
         {/* <div className=" h-[200px] border" /> */}
         <div className="mt-5">
           <div className="flex items-center gap-[10px]">
@@ -120,25 +110,26 @@ const Home: React.FC = () => {
           <div className=" mt-10 lg:mt-34 w-64 h-9  rounded-3xl  flex  items-center px-5 " style={{ background: 'linear-gradient(90deg, rgba(222, 151, 247, 0.24) 0%, rgba(178, 148, 245, 0.24) 50%, rgba(155, 177, 253, 0.24) 100%)' }}>
             <Image src={star_png} className=" w-8  h-6" alt="bg" />
             <div className=" text-sm  text-test" >构建算力生态，引领算力市场</div>
+
           </div>
-          <div className=" mt-6 text-titleColor text-xl lg:text-5xl">以价值创造价值，以梦想成就梦想</div>
+          <div className=" mt-6 text-titleColor text-xl lg:text-5xl" style={{ fontFamily: 'alibb-regular' }}>以价值创造价值，以梦想成就梦想</div>
           <div className=" mt-6 text-titleColor   text-[12px]  lg:text-16px" style={{ color: '#B4BCD0', fontFamily: 'alibb-light' }}  >迎接绿色，人本的 AI 时代，AGI问题发现者，算力市场创新者</div>
           <div className=" mt-15 ">
             <Image src={text_png} className="   w-70  lg:w-115   h-20" alt="bg" />
           </div>
           <div className=" mt-10 lg:mt-59  w-4/5" style={{ height: '1px', background: ' linear-gradient(90deg, rgba(42, 45, 68, 0.00) 0%, #2A2D44 50%, rgba(42, 45, 68, 0.00) 100%)' }}></div>
         </div>
-        <div className=" px-4  mt-25  w-40 h-9 rounded-2xl  flex items-center gap-1  " style={{ border: '1px solid #7877C6' }}>
+        <div className=" px-4  mt-25  w-32 h-9 rounded-2xl  flex justify-center items-center gap-1  " style={{ border: '1px solid #7877C6' }}>
           <Image src={arrows_png} className=" w-5  h-5" alt="bg" />
-          <div className=" text-[16px] text-white">产品战略</div>
+          <div className=" text-[16px] text-white ">产品战略</div>
 
         </div>
 
         <div className=" mt-10 w-full text-center ">
-          <div className="text-2xl lg:text-3xl text-title">
+          <div className="text-xl lg:text-3xl text-title">
             以算力市场平台作为产品组合基座
           </div>
-          <div className="text-2xl lg:text-3xl text-title mt-1">
+          <div className="text-xl lg:text-3xl text-title mt-1">
             汇集算力组合创新性产品
           </div>
         </div>
@@ -150,7 +141,7 @@ const Home: React.FC = () => {
 
 
             <Image src={shandian_png} className=" w-4 h-4" alt="bg" />
-            <div className=" text-white text-xl">算力交易平台</div>
+            <div className=" text-white text-xl" style={{ fontFamily: 'alibb-regular' }}>算力交易平台</div>
 
           </div>
           <div className=" w-70 text-16px  font-thin " style={{ color: 'rgba(239, 237, 253, 0.70)', fontFamily: 'alibb-light' }}>
