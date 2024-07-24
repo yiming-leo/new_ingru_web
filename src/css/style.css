@@ -219,7 +219,7 @@ height: 40px !important;
 /* 分页 */
 
 /* hover */
-:where(.css-dev-only-do-not-override-17seli4).ant-pagination .ant-pagination-item-active:hover {
+.ant-pagination .ant-pagination-item-active:hover {
     /* color: #ffff; */
 }
 
@@ -227,23 +227,23 @@ height: 40px !important;
     color: #adadad !important;
 }
 
-:where(.css-dev-only-do-not-override-17seli4).ant-pagination .ant-pagination-item-active:hover {
+.ant-pagination .ant-pagination-item-active:hover {
     border-color: #adadad !important;
 }
 
-:where(.css-dev-only-do-not-override-17seli4).ant-pagination .ant-pagination-item-active {
+.ant-pagination-item-active {
     border-color: #adadad !important;
 }
 
-:where(.css-dev-only-do-not-override-17seli4).ant-pagination .ant-pagination-item a {
+.ant-pagination .ant-pagination-item a {
     color: #adadad !important;
 }
 
-:where(.css-dev-only-do-not-override-17seli4).ant-pagination .ant-pagination-prev button {
+.ant-pagination .ant-pagination-prev button {
     color: #adadad !important;
 }
 
-:where(.css-dev-only-do-not-override-17seli4).ant-pagination .ant-pagination-next button {
+.ant-pagination .ant-pagination-next button {
     color: #adadad !important;
 }
 
@@ -251,11 +251,11 @@ height: 40px !important;
     color: #adadad !important;
 }
 
-:where(.css-dev-only-do-not-override-17seli4).ant-pagination .ant-pagination-item-active {
+.ant-pagination .ant-pagination-item-active {
     background-color: #000;
 }
 
-:where(.css-dev-only-do-not-override-17seli4).ant-select-outlined:not(.ant-select-customize-input) .ant-select-selector {
+.ant-select-outlined:not(.ant-select-customize-input) .ant-select-selector {
     background-color: #000;
 }
 
@@ -267,11 +267,11 @@ height: 40px !important;
     border-color: #adadad
 }
 
-:where(.css-dev-only-do-not-override-17seli4).ant-select-single.ant-select-open .ant-select-selection-item {
+.ant-select-single.ant-select-open .ant-select-selection-item {
     color: #adadad
 }
 
-:where(.css-dev-only-do-not-override-17seli4).ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector {
+.ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector {
     border-color: #adadad
 }
 
