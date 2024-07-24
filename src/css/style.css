@@ -42,7 +42,7 @@ body {
 /* 分割 */
 
 :where(.css-dev-only-do-not-override-17seli4).ant-menu .ant-menu-item .ant-menu-item-icon svg {
-    /* color: #DE97F7 !important; */
+    /* color: #DE97F7 !important;  */
     color: #64748b;
 }
 
