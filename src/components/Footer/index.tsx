@@ -10,8 +10,12 @@ import axiosReq from '@/utils/req'
 import vx_svg from '@/assets/svg/vx.svg';
 import zh_svg from '@/assets/svg/zh.svg';
 import yinru_png from '@/assets/img/yinru.png';
+import {
+    WechatOutlined
+} from '@ant-design/icons';
 import logo_png from '@/assets/img/logo.png';
 import WxIcon from "../Icon/wx";
+import Link from "next/link";
 
 
 
@@ -24,10 +28,11 @@ const Footer: React.FC<any> = () => {
     );
 
 
-    const BottomText = ({ text, index }) => {
-        return <div className={` hover:text-white  ${index == 0 && 'text-white'}  text-[12px] lg:text-sm   cursor-pointer`}>
+    const BottomText = ({ text, index, url = '/' }) => {
+        return <Link href={url} className={` hover:text-white  ${index == 0 && 'text-white'}  text-[12px] lg:text-sm   cursor-pointer`}>
             {text}
-        </div>
+
+        </Link>
     }
 
     const textData = [{
@@ -35,6 +40,7 @@ const Footer: React.FC<any> = () => {
     },
     {
         name: '算力交易市场',
+        url: '/tradingmarket/'
     }, {
         name: '新一代内容平台',
     }, {
@@ -59,15 +65,15 @@ const Footer: React.FC<any> = () => {
                     <div className="flex  lg:gap-13  flex-wrap  gap-1 mt-3 lg:mt-0 ">
                         {textData.map((item, index) => {
                             return (
-                                <BottomText key={index} index={index} text={item.name}></BottomText>
+                                <BottomText url={item.url} key={index} index={index} text={item.name}></BottomText>
                             )
                         })}
                     </div>
                 </div>
                 <div className=" flex gap-5">
                     <Popover content={content} trigger="hover">
-                        <Image src={vx_svg} className="    transition-all transform  hover:scale-125  cursor-pointer   w-[20px] h-[20px]     " alt="bg" />
-
+                        {/* <Image src={vx_svg} className="    transition-all transform  hover:scale-125  cursor-pointer   w-[20px] h-[20px]     " alt="bg" /> */}
+                        <WechatOutlined className=" w-[20px] h-[20px]    hover:text-white  text-[#adadad]   lg:scale-[1.3]     transition-all transform  hover:scale-[1.4]  cursor-pointer " />
                         {/* <WxIcon ></WxIcon> */}
                     </Popover>
 

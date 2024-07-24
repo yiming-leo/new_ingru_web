@@ -42,11 +42,13 @@ body {
 /* 分割 */
 
 :where(.css-dev-only-do-not-override-17seli4).ant-menu .ant-menu-item .ant-menu-item-icon svg {
-    color: #DE97F7 !important;
+    /* color: #DE97F7 !important; */
+    color: #64748b;
 }
 
 :where(.css-17seli4).ant-menu .ant-menu-item .ant-menu-item-icon svg {
-    color: #DE97F7 !important;
+    /* color: #DE97F7 !important; */
+    color: #64748b;
 }
 
 :where(.css-dev-only-do-not-override-17seli4).ant-menu-light .ant-menu-item {
@@ -54,18 +56,24 @@ body {
 }
 
 :where(.css-dev-only-do-not-override-17seli4).ant-menu-light .ant-menu-submenu-selected>.ant-menu-submenu-title {
-    background: linear-gradient(90deg, #DE97F7 0%, #B294F5 50.5%, #9BB1FD 100%) !important;
+    background: linear-gradient(90deg, #DE97F7 0%, #B294F5 50.5%, #839aee 100%) !important;
     background-clip: text !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
 }
 
 .ant-menu-title-content {
-    background: linear-gradient(90deg, #DE97F7 0%, #B294F5 50.5%, #9BB1FD 100%) !important;
-    background-clip: text !important;
+    color: #64748b;
+    /* background: linear-gradient(90deg, #DE97F7 0%, #B294F5 50.5%, #9BB1FD 100%) !important; */
+    /* background-clip: text !important;
     -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
+    -webkit-text-fill-color: transparent !important; */
 
+}
+
+:where(.css-dev-only-do-not-override-17seli4).ant-menu-light .ant-menu-item-selected {
+    /* background-color: #e6f4ff; */
+    background-color: #dbe2ec
 }
 
 :where(.css-dev-only-do-not-override-17seli4).ant-drawer .ant-drawer-body {

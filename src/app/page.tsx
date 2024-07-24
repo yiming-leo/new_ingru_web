@@ -79,7 +79,7 @@ const Home: React.FC = () => {
     return (
       <div className=" flex-1 lg:w-[380px] mt-10 lg:mt-0 cursor-pointer " onClick={() => toNewsContent(index)} >
         <div className=" overflow-hidden  rounded-lg ">
-          <Image src={imageSrc} className=" h-[200px]  transform  hover:scale-[1.05] transition-all " style={{ margin: 'auto' }} alt="bg" />
+          <Image src={imageSrc} className=" h-[200px]  transform  hover:scale-[1.07] transition-all " style={{ margin: 'auto' }} alt="bg" />
         </div>
         {/* <div className=" h-[200px] border" /> */}
         <div className="mt-5">
@@ -144,7 +144,7 @@ const Home: React.FC = () => {
             <div className=" text-white text-xl" style={{ fontFamily: 'alibb-regular' }}>算力交易平台</div>
 
           </div>
-          <div className=" w-70 text-16px  font-thin " style={{ color: 'rgba(239, 237, 253, 0.70)', fontFamily: 'alibb-light' }}>
+          <div className=" w-70 text-16px  font-thin text-center " style={{ color: 'rgba(239, 237, 253, 0.70)', fontFamily: 'alibb-light' }}>
             算力交易新生态，优化资源配置，激发闲置算力，打造算力统一大市场
           </div>
         </div>
